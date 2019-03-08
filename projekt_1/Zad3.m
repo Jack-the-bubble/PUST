@@ -1,10 +1,15 @@
+%PUST Projekt 1
+%Zadanie 3
+%Przekszta³cenie odpowiedzi skokowej pod DMC
+%Wziêto ostatni¹ wyznaczon¹ odpowiedŸ skokow¹ (Ukon = 1.25)
+%TODO: po co w sumie generowaæ wszystkie wczeœniejsze odpowiedzi skokowe?
+
 U(1:10) = 1.1;
 Ukon = 0.95;
 kwyk = 1:1:200;
+Y(1:200) = 2;
 %Ynorm(1:200) = 2;
 
-%do wykresu odpowiedzi skokowych 10 iteracji i skok Ukon o 0.03
-%do char stat 100 iteracji i skok Ukon o 0.003
 for i = 1:10
     
     U(11:200) = Ukon;
@@ -26,6 +31,7 @@ for i = 1:10
 end
 hold off
 
+%normalizacja odpowiedzi skokowej
 Ynorm = (Y - 2)./0.15;
 
 figure

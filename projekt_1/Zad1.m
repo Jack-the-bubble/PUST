@@ -1,3 +1,6 @@
+%PUST Projekt 1
+%Zadanie 1
+
 clear Y;
 clear U;
 
@@ -6,7 +9,7 @@ U(1:151) = 1.1;
 
 for k = 12:1:151
     Y(k) = symulacja_obiektu3Y(U(k-10),U(k-11),Y(k-1),Y(k-2));
-    
 end
 
-%punkt pracy z zadania 1 poprawny
+%punkt pracy z zadania 1 poprawny, poniewa¿ wartoœci Y po uruchomieniu
+%skryptu pozosta³y 2
