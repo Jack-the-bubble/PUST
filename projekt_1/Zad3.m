@@ -4,21 +4,20 @@
 %Wzi�to ostatni� wyznaczon� odpowied� skokow� (Ukon = 1.25)
 %TODO: po co w sumie generowa� wszystkie wcze�niejsze odpowiedzi skokowe?
 
-iterNum = 300;
+iterNumSkok = 300;
+chwila_skoku_U = 20;
+wartosc_skoku_U = 0.12;
 
-U(1:10) = 1.1;
-Ukon = 1.22;
-kwyk = 1:1:iterNum;
-Y(1:iterNum) = 2;
-%Ynorm(1:200) = 2;
+U(1:(chwila_skoku_U-1)) = Upp;
+Ukon = Upp + wartosc_skoku_U;
 
-%for i = 1:10
+Y(1:iterNumSkok) = Ypp;
     
-    U(11:iterNum) = Ukon;
+    U(chwila_skoku_U:iterNumSkok) = Ukon;
     
-    for k = 12:1:iterNum
-       Y(k) = symulacja_obiektu3Y(U(k-10),U(k-11),Y(k-1),Y(k-2));
-    end
+for k = 12:1:iterNumSkok
+   Y(k) = symulacja_obiektu3Y(U(k-10),U(k-11),Y(k-1),Y(k-2));
+end
     
 %     subplot(2,1,1)
 %     stairs(kwyk,Y)
@@ -34,8 +33,9 @@ Y(1:iterNum) = 2;
 %hold off
 
 %normalizacja odpowiedzi skokowej
-Ynorm = (Y - 2)./0.12;
+Ynorm = (Y - Ypp)./wartosc_skoku_U;
 
-% figure
-% stairs(kwyk, Ynorm);
+%kwyk = 1:1:iterNum;
+%figure
+%stairs(kwyk, Ynorm);
 

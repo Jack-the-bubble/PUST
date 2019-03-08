@@ -1,21 +1,37 @@
 %Projekt PUST
 %Zadanie 4
 %Symulacja algorytmu DMC
+clear e u y U Y
 
 zad3skrypt = fullfile('Zad3.m');
 
 run(zad3skrypt);
 
+clear U Y
 
 %REGULATOR DMC -----------------------------------------------------
 %horyzonty
-N = 289;
-Nu = 289;
-D = 289;
+D = 202;
+N = 100;
+Nu = 1;
 lambda = 1;
 
+%PARAMETRY 
+y = zeros(iterNum,1);
+u = zeros(iterNum,1);
+du = 0;
+
+ypast = 0.0; %poprzednia wartosc wyjscia
+upast = 0.0; %poprzednia wartosc sterowania
+e = 0.0; %uchyb
+
+U = ones(iterNum,1)*Upp;
+Y = ones(iterNum,1)*Ypp;
+dUpast = zeros(D-1, 1); %wektor przeszlych przyrostow sterowan
+
+
 %przypisanie odpowiedzi skokowej (znormalizowanej=
-st = Ynorm(12:300);
+st = Ynorm((chwila_skoku_U+1):300);
 %pobrac z Zad3
 
 % Macierz M
@@ -27,6 +43,7 @@ for i=1:N
       end
    end
 end
+
 % Macierz Mp
 Mp=zeros(N,D-1);
 for i=1:N
@@ -38,55 +55,14 @@ for i=1:N
       end      
    end
 end
+
 % Obliczanie parametrów regulatora
 I=eye(Nu);
 K=((M'*M+lambda*I)^(-1))*M';
 Ku=K(1,:)*Mp;
 ke=sum(K(1,:));
-    
-% time=3000;
-
-
 
 % -------------- DO REGULACJI ---------------
-% stabil_time =1000;
-% y_zad1 = -500;
-% y_zad2 = 500;
-iterNum = 1270;
-Umin = 0.9;
-Umax = 1.3;
-Ypp = 2;
-Upp = 1.1;
-
-y = zeros(iterNum,1);
-u = zeros(iterNum,1);
-du = 0;
-deltaUmax = 0.05;
-
-yZad = ones(iterNum, 1)*Ypp; %najpierw -500, po 1s 500
-% yZad(21:iterNum) = 2.2;
-yZad(21:270) = 2.05;
-yZad(271:520) = 1.95;
-yZad(521:770) = 2.1;
-yZad(771:1020) = 1.9;
-yZad(1021:1270) = 2.15;
-ypast = 0.0; %poprzednia wartosc wyjscia
-upast = 0.0; %poprzednia wartosc sterowania
-e = 0.0; %uchyb
-
-U = ones(iterNum,1)*Upp;
-Y = ones(iterNum,1)*Ypp;
-dUpast = zeros(D-1, 1); %wektor przeszlych przyrostow sterowan
-
-% while licznik<time		
-% 		
-% if licznik < stabil_time
-% 	yzad = y_zad1;
-% else
-% 	yzad = y_zad2;
-% end
-
-yZad = yZad - Ypp;
 
 for k = 12 : iterNum
 
@@ -135,8 +111,8 @@ end
     dUpast = [du; dUpast(1:end-1)];       
 end
 
-    figure(1)
-    plot(U); hold on; plot(Y); hold off;hold on; plot(yZad+Ypp); hold off;    
+%figure(1)
+%plot(U); hold on; plot(Y); hold off;hold on; plot(yZad+Ypp); hold off;    
 figure(2)   
 subplot(2,1,1);
 plot(Y);
