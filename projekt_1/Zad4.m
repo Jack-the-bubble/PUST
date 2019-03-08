@@ -11,10 +11,10 @@ Umax = 1.3;
 deltaUmax = 0.05;
 iterNum = 300; %liczba iteracji
 
-%nastawy i czas probkowania (TODO: pomyœleæ o sekcjonowaniu kodu)
-Ti = 100;
-Td = 0.1;
-K = 0.4;
+%nastawy i czas probkowania (TODO: pomyï¿½leï¿½ o sekcjonowaniu kodu)
+Ti = 10;
+Td = 0.3;
+K = 0.8;
 T = 0.5;
 
 %wzorki
@@ -22,16 +22,17 @@ r0 = K*(1+T/(2*Ti)+Td/T);
 r1 = K*(T/(2*Ti)-2*Td/T-1);
 r2 = K*Td/T;
 
-%sygna³y
+%sygnaï¿½y
 u = zeros(iterNum, 1);
 e = zeros(iterNum, 1);
 y = zeros(iterNum, 1);
 U = ones(iterNum, 1)*Upp;
 Y = ones(iterNum, 1)*Ypp;
 
-%wartoœci zadane
-yZad(1:20) = 2;
-yZad(21:iterNum) = 2.2; %TODO: jeszcze raz zastanowiæ siê, czy to dobra próbka na skok
+%wartoï¿½ci zadane
+yZad(1:20) = Ypp;
+yZad(21:iterNum) = 2.2; %TODO: jeszcze raz zastanowiï¿½ siï¿½, czy to dobra prï¿½bka na skok
+yZad = yZad - Ypp;
 
 for k = 12 : 300
     %SYMULACJA ALGORYTMU
@@ -40,7 +41,7 @@ for k = 12 : 300
 
     %przesuniecie wyjscia i wart. zad. o punkt pracy
     y(k) = Y(k)-Ypp; 
-    yZad(k) = yZad(k)-Ypp;
+%     yZad(k) = yZad(k)-Ypp;
     
     %uchyb
     e(k) = yZad(k) - y(k);
@@ -67,5 +68,5 @@ end
 
 stairs([1:iterNum],Y);
 hold on
-%stairs([1:iterNum], U); TODO: mo¿e lepiej na osobnym wykresie?
-stairs([1:iterNum],yZad+Ypp); %TODO: jak sensownie przedstawiæ wart. zad. na tym wykresie?
+%stairs([1:iterNum], U); TODO: moï¿½e lepiej na osobnym wykresie?
+stairs([1:iterNum],yZad+Ypp); %TODO: jak sensownie przedstawiï¿½ wart. zad. na tym wykresie?
