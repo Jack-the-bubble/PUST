@@ -52,7 +52,7 @@ ke=sum(K(1,:));
 % stabil_time =1000;
 % y_zad1 = -500;
 % y_zad2 = 500;
-iterNum = 1000;
+iterNum = 1270;
 Umin = 0.9;
 Umax = 1.3;
 Ypp = 2;
@@ -64,7 +64,12 @@ du = 0;
 deltaUmax = 0.05;
 
 yZad = ones(iterNum, 1)*Ypp; %najpierw -500, po 1s 500
-yZad(21:iterNum) = 2.2;
+% yZad(21:iterNum) = 2.2;
+yZad(21:270) = 2.05;
+yZad(271:520) = 1.95;
+yZad(521:770) = 2.1;
+yZad(771:1020) = 1.9;
+yZad(1021:1270) = 2.15;
 ypast = 0.0; %poprzednia wartosc wyjscia
 upast = 0.0; %poprzednia wartosc sterowania
 e = 0.0; %uchyb
@@ -103,14 +108,6 @@ u(k) = upast+du;
 
 U(k) = u(k) + Upp;
 
-if U(k) <  Umin 
-     U(k) = Umin;
-
-elseif U(k) > Umax 
-     U(k) = Umax;
-
-end
-
     %ograniczenia na przyrosty sterowania
     if du >= deltaUmax
        U(k) = U(k-1) + deltaUmax;
@@ -119,6 +116,17 @@ end
        U(k) = U(k-1) - deltaUmax;
        du = -deltaUmax;
     end
+
+
+if U(k) <  Umin 
+     U(k) = Umin;
+
+elseif U(k) > Umax 
+     U(k) = Umax;
+
+end
+
+
     
     %dUpast = [u(k-1)-u(k-2) u(k-2)-u(k-3) .... dU(k-D+1)]
 
