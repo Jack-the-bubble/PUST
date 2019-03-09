@@ -2,19 +2,10 @@
 %Zadanie 4
 %Symulacja cyfrowego algorytmu PID
 
-clear all
-
-Upp = 1.1;
-Ypp = 2;
-Umin = 0.9;
-Umax = 1.3;
-deltaUmax = 0.05;
-iterNum = 300; %liczba iteracji
-
 %nastawy i czas probkowania (TODO: pomy�le� o sekcjonowaniu kodu)
-Ti = 10;
-Td = 0.3;
-K = 0.8;
+Ti = 15;
+Td = 1;
+K = 0.5;
 T = 0.5;
 
 %wzorki
@@ -29,12 +20,7 @@ y = zeros(iterNum, 1);
 U = ones(iterNum, 1)*Upp;
 Y = ones(iterNum, 1)*Ypp;
 
-%warto�ci zadane
-yZad(1:20) = Ypp;
-yZad(21:iterNum) = 2.2; %TODO: jeszcze raz zastanowi� si�, czy to dobra pr�bka na skok
-yZad = yZad - Ypp;
-
-for k = 12 : 300
+for k = 12 : iterNum
     %SYMULACJA ALGORYTMU
     %pobranie wyjscia obiektu
     Y(k)=symulacja_obiektu3Y(U(k-10), U(k-11), Y(k-1), Y(k-2));
@@ -66,7 +52,13 @@ for k = 12 : 300
     
 end
 
-stairs([1:iterNum],Y);
-hold on
-%stairs([1:iterNum], U); TODO: mo�e lepiej na osobnym wykresie?
-stairs([1:iterNum],yZad+Ypp); %TODO: jak sensownie przedstawi� wart. zad. na tym wykresie?
+figure(1)
+subplot(2,1,1);
+plot(Y);
+hold on;
+plot(yZad+Ypp);
+hold off;
+title(['Regulator PID K=',sprintf('%g',K'),' Ti=',sprintf('%g',Ti),' Td=',sprintf('%g',Td)]);
+legend('y','yzad')
+subplot(2,1,2);
+plot(U);
