@@ -13,7 +13,16 @@
 % 4. dowolna modyfikacja K i Ti, tak by uzyskać lepszy rezultat
 
 %DMC
-% #TODO lepszy dobór parametrów dla DMC
+% Parametry: D=182, N = 35, Nu = 2, lambda = 21
+% Proces dobierania:
+% 1. dobranie D=182, ustawienie N=D, Nu=D, przyjęcie początkowej wartości lambda na lambda=1
+% 2. stopniowe skracanie N, aż będzie możliwie najmniejszy bez straty
+% jakości regulacji, przyjęcie Nu=N , uzyskano N = 35
+% 3. dla D=182, N=35, lambda=1, zwiększanie Nu=1,2,... i sprawdzenie, dla
+% którego będzie najlepsza regulacja, dobrano Nu=2
+% 4. dobranie współczynnik lambda, najpierw szukano zmieniając o rząd
+% wielkości, a potem zmieniajac o jedności, uzyskano lambda=21
+
 
 clear all;
 
@@ -32,17 +41,18 @@ yZad(771:1020) = 1.9;
 yZad(1021:1270) = 2.15;
 yZad = yZad - Ypp;
 
+
 PID = fullfile('Zad4.m');
 run(PID);
 wskaznikPID = sum(((yZad+Ypp) - Ypid).^2);
 disp("Wskaznik jakosci regulacji dla regulatora PID: "+ wskaznikPID);
 
-%{
+
 DMC = fullfile('Zad4DMCKamilMichal.m');
 run(DMC);
-wskaznikDMC = sum((yZad - Ydmc).^2);
+wskaznikDMC = sum(((yZad+Ypp) - Ydmc).^2);
 disp("Wskaznik jakosci regulacji dla regulatora DMC: "+ wskaznikDMC);
-%}
+
 
 
 
