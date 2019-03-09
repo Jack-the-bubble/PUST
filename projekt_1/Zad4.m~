@@ -3,7 +3,7 @@
 %Symulacja cyfrowego algorytmu PID
 
 %nastawy i czas probkowania (TODO: pomy�le� o sekcjonowaniu kodu)
-Ti = 24;
+Ti = 31;
 Td = 3;
 K = 0.7;
 T = 0.5;

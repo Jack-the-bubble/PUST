@@ -111,6 +111,9 @@ end
     dUpast = [du; dUpast(1:end-1)];       
 end
 
+
+Ydmc = Y;
+Udmc = U;
 %figure(1)
 %plot(U); hold on; plot(Y); hold off;hold on; plot(yZad+Ypp); hold off;    
 figure(2)   
