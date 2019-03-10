@@ -3,9 +3,11 @@
 %Przekszta�cenie odpowiedzi skokowej pod DMC
 %Wzi�to ostatni� wyznaczon� odpowied� skokow� (Ukon = 1.25)
 %TODO: po co w sumie generowa� wszystkie wcze�niejsze odpowiedzi skokowe?
-
+Upp = 1.1;
+Ypp = 2;
+iterNum = 300;
 iterNumSkok = 300;
-chwila_skoku_U = 20;
+chwila_skoku_U = 12;
 wartosc_skoku_U = 0.12;
 
 U(1:(chwila_skoku_U-1)) = Upp;
@@ -35,7 +37,9 @@ end
 %normalizacja odpowiedzi skokowej
 Ynorm = (Y - Ypp)./wartosc_skoku_U;
 
-%kwyk = 1:1:iterNum;
-%figure
-%stairs(kwyk, Ynorm);
-
+kwyk = 1:1:iterNum;
+figure
+stairs(kwyk, Ynorm);
+matlab2tikz('wykresy_dane/odp_skokowaDMC.tex', 'showInfo', false);
+xlabel('k');
+ylabel('Y');
