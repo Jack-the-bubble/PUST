@@ -13,6 +13,10 @@ function[] = Zad2(arg)
     elseif arg == 1
         iter = 100;
         Uskok = 0.003;
+    elseif arg == 2
+        iter = 100;
+        Uskok = 0.003;
+        rozp = -1;
     else
         disp('Zly argument!');
         return
@@ -20,6 +24,9 @@ function[] = Zad2(arg)
 
     U(1:10) = 1.1;
     Ukon = 0.95;
+    if arg == 2
+        Ukon = 1.1;
+    end
     kwyk = 1:1:200;
     Y(1:200) = 2;
    
@@ -46,19 +53,23 @@ function[] = Zad2(arg)
         stairs(kwyk,U)
         hold on
 
-        Ukon = Ukon + Uskok;
+        Ukon = Ukon + i*Uskok*(rozp^i);
 
     end
     hold off
     if arg == 0
         matlab2tikz('wykresy_dane/odp_skokowa_10.tex', 'showInfo', false);
-    else if arg == 1
+    elseif arg == 1
         matlab2tikz('wykresy_dane/odp_skokowa_100.tex', 'showInfo', false);
+    elseif arg == 2
+        matlab2tikz('wykresy_dane/odp_skokowa_rozchodzaca.tex', 'showInfo', false);
     end
     
-    if arg == 1
+    if arg == 1 || arg == 2
         figure
         plot (Ustat, Ystat) %TODO: czy nie powinni�my zrobi� tego jako zbi�r punkt�w zamiast ci�g�ej funkcji?
+        xlabel('U statyczne');
+        ylabel('Y statyczne');
         matlab2tikz('wykresy_dane/char_statyczna.tex', 'showInfo', false);
     end
 end
