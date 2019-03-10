@@ -14,7 +14,7 @@ function[] = Zad2(arg)
         iter = 100;
         Uskok = 0.003;
     else
-        disp("Zly argument!");
+        disp('Zly argument!');
         return
     end
 
@@ -35,10 +35,14 @@ function[] = Zad2(arg)
         Ystat(i) = Y(200);
 
         subplot(2,1,1)
-        plot(kwyk,Y)
+        xlabel('k');
+        ylabel('Y')
+        stairs(kwyk,Y)
         hold on
 
         subplot(2,1,2)
+        xlabel('k');
+        ylabel('U')
         stairs(kwyk,U)
         hold on
 
@@ -46,10 +50,16 @@ function[] = Zad2(arg)
 
     end
     hold off
-
+    if arg == 0
+        matlab2tikz('wykresy_dane/odp_skokowa_10.tex', 'showInfo', false);
+    else if arg == 1
+        matlab2tikz('wykresy_dane/odp_skokowa_100.tex', 'showInfo', false);
+    end
+    
     if arg == 1
         figure
-        plot (Ustat, Ystat) %TODO: czy nie powinniœmy zrobiæ tego jako zbiór punktów zamiast ci¹g³ej funkcji?
+        plot (Ustat, Ystat) %TODO: czy nie powinniï¿½my zrobiï¿½ tego jako zbiï¿½r punktï¿½w zamiast ciï¿½gï¿½ej funkcji?
+        matlab2tikz('wykresy_dane/char_statyczna.tex', 'showInfo', false);
     end
 end
 
