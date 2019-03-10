@@ -35,11 +35,11 @@ function[] = Zad2(arg)
         Ystat(i) = Y(200);
 
         subplot(2,1,1)
-        stairs(kwyk,Y)
+        plot(kwyk,Y)
         hold on
 
         subplot(2,1,2)
-        plot(kwyk,U)
+        stairs(kwyk,U)
         hold on
 
         Ukon = Ukon + Uskok;
