@@ -8,12 +8,12 @@ Td = 3;
 K = 0.7;
 T = 0.5;
 
-%wzorki
+
 r0 = K*(1+T/(2*Ti)+Td/T);
 r1 = K*(T/(2*Ti)-2*Td/T-1);
 r2 = K*Td/T;
 
-%sygna�y
+
 u = zeros(iterNum, 1);
 e = zeros(iterNum, 1);
 y = zeros(iterNum, 1);
@@ -40,7 +40,7 @@ for k = 12 : iterNum
     if U(k) - U(k-1) >= deltaUmax
         U(k) = U(k-1) + deltaUmax;
     elseif U(k) - U(k-1) <= -deltaUmax
-            U(k) = U(k-1) - deltaUmax;
+         U(k) = U(k-1) - deltaUmax;
     end
     
     %ograniczenia na wartosci sterowania
