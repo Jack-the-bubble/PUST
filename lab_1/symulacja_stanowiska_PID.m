@@ -26,7 +26,7 @@ Gtrans = tfest(Grzalka, 2,0)   % Estymowanie transmitancji
 s = tf('s');
 Gtrans = Gtrans*exp(-8*s);%prawdziwe opóźnienie
 G_d = c2d(Gtrans,1,'zoh')
-figure (1);plot(G_y);hold on;plot(G_u);hold off;hold on; step(Gtrans);hold off;
+figure (1);plot(G_y);hold on;step(Gtrans);hold off;hold on; step(G_d);hold off;
 
  a = G_d.Numerator{1}(2);
  b=G_d.Numerator{1}(3);
@@ -72,7 +72,6 @@ for(k=11:iterNum)
      
      
 end
- 
 figure(2)
      subplot(2,1,1);
      stairs(Y+Ypp);
