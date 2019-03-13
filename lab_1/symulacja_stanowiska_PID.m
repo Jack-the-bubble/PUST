@@ -1,10 +1,14 @@
-clear all
+% clear all
 load('step-response80.mat');
 
 %parametry
- K = 8;
+ K = 8; %stare
  Ti = 20;
  Td = 0;
+%  K = 41; % najszybsza regulacja
+%  Ti = 11;
+%  Td = 11;
+
  T = 1;
 
 
@@ -12,27 +16,34 @@ load('step-response80.mat');
 y1=step_response';
 u1=ones(length(step_response),1)*80;
 %dane
- iterNum = 1200;
+ iterNum = 900;
  Ypp = 35.62;
  Upp = 28;
  Umin = 0 - Upp;
  Umax = 100 - Upp;
- 
-G_y = (y1 - Ypp)/52;
-G_u = (u1 - Upp)/52;
+% % normalizacja  
+% G_y = (y1 - Ypp)/52;
+% G_u = (u1 - Upp)/52;
+% % estymacja transmitancji
+% Grzalka = iddata(G_y, G_u, 1); % Zamiana I/O na obiekt na jakistam obiekt
+% Gtrans = tfest(Grzalka, 2,0)   % Estymowanie transmitancji
+% s = tf('s');
+% Gtrans = Gtrans*exp(-8*s);%prawdziwe opóźnienie
+% G_d = c2d(Gtrans,1,'zoh')
+% 
+% 
+% 
+% figure (1);plot(G_y);hold on;step(Gtrans);hold off;hold on; step(G_d);hold off;
+% 
+%  a = G_d.Numerator{1}(2);
+%  b=G_d.Numerator{1}(3);
+%  c=G_d.Denominator{1}(2);
+%  d=G_d.Denominator{1}(3);
 
-Grzalka = iddata(G_y, G_u, 1); % Zamiana I/O na obiekt na jakistam obiekt
-Gtrans = tfest(Grzalka, 2,0)   % Estymowanie transmitancji
-s = tf('s');
-Gtrans = Gtrans*exp(-8*s);%prawdziwe opóźnienie
-G_d = c2d(Gtrans,1,'zoh')
-figure (1);plot(G_y);hold on;step(Gtrans);hold off;hold on; step(G_d);hold off;
+% % stara transmitancja
 
- a = G_d.Numerator{1}(2);
- b=G_d.Numerator{1}(3);
- c=G_d.Denominator{1}(2);
- d=G_d.Denominator{1}(3);
-
+% %nowa transmitancja
+% wykonac skrypt Lab1Zad3b
  
  
  
@@ -51,12 +62,13 @@ figure (1);plot(G_y);hold on;step(Gtrans);hold off;hold on; step(G_d);hold off;
  e = zeros(iterNum, 1);
  U = zeros(iterNum, 1); %zmienic tak, zeby bral od poczatku aktualne wartosci u i y
  Y = zeros(iterNum, 1);
- 
-for(k=11:iterNum)
+for(k=3+x(4)+2:iterNum)% bylo 11
      %SYMULACJA ALGORYTMU
      %pobranie wyjscia obiektu
-     Y(k)= a*U(k-9) + b*U(k-10) - c*Y(k-1) - d*Y(k-2);
-     
+%      Y(k)= a*U(k-9) + b*U(k-10) - c*Y(k-1) - d*Y(k-2); %obiekt stary, z
+%      pdf-a?
+    Y(k) = b1* U(k - x(4) - 1) + b2 * U(k - x(4) - 2) - a1 * Y(k-1) - a2 * Y(k-2);
+
      %uchyb
      e(k) = yZad(k) - Y(k);
      

@@ -69,11 +69,10 @@ load('step-response80.mat');
 
     end
     
-figure(2)
-     stairs(y);
+% figure(2)
+%      stairs(y);
 
-     
-     
+         
 function error = model(param)
 
     load('step-response80.mat');
@@ -105,7 +104,7 @@ function error = model(param)
     end
     
     error = sum((Ynorm - y).^2);
-    disp("Wskaznik dopasowania: "+ error);
+    disp('Wskaznik dopasowania: '+ error);
 end
 
 %dorobic optymalizacje i przedstawienie na wykresie
