@@ -62,6 +62,19 @@ hold on;
 plot(yZad+Ypp);
 hold off;
 title(['Regulator PID K=',sprintf('%g',K'),' Ti=',sprintf('%g',Ti),' Td=',sprintf('%g',Td)]);
-legend('y','yzad')
+legend('y','y_{zad}')
+xlabel('k');
+ylabel('y,y_{zad}');
+ylim([1.8 2.5]);
+xlim([0 1270]);
 subplot(2,1,2);
 plot(U);
+xlim([0 1270]);
+legend('u')
+xlabel('k');
+ylabel('u');
+
+
+nazwa = sprintf('regulator_PID_K=%g_Ti=%g_Td=%g.tex',K,Ti,Td);
+%print (nazwa, '-dpng', '-r400')
+matlab2tikz(nazwa,'showInfo',false);

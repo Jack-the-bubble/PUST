@@ -123,9 +123,22 @@ hold on;
 plot(yZad+Ypp);
 hold off;
 title(['Regulator DMC D=',sprintf('%g',D'),' N=',sprintf('%g',N),' Nu=',sprintf('%g',Nu),' lambda=',sprintf('%g',lambda)]);
-legend('y','yzad')
+legend('y','y_{zad}')
+xlabel('k');
+ylabel('y,y_{zad}');
+ylim([1.8 2.5]);
+xlim([0 1270]);
 subplot(2,1,2);
-plot(U);
+stairs(U);
+xlim([0 1270]);
+xlabel('k');
+legend('u');
+ylabel('u');
+
+nazwa = sprintf('regulator_DMC_D=%g_N=%g_Nu=%g_L=%g.tex',D,N,Nu,lambda);
+%print (nazwa, '-dpng', '-r400')
+matlab2tikz(nazwa,'showInfo',false);
+
 
 %-----DO ZAPISYWANIA DO PLIKU-----------
 %-----GENEROWANIE Ku--------------------

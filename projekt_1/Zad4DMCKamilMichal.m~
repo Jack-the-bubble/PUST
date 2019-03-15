@@ -1,45 +1,38 @@
 %Projekt PUST
 %Zadanie 4
 %Symulacja algorytmu DMC
-clear all
-zad3skrypt = fullfile('Lab1Zad3b.m');
+clear e u y U Y
+
+zad3skrypt = fullfile('Zad3.m');
 
 run(zad3skrypt);
 
-%przypisanie odpowiedzi skokowej (znormalizowanej=
-st = Ynorm((chwila_skoku_U+1):900);
-
 clear U Y
-
-% podstawowe wartosci
-Upp = 28;
-iterNum = 900;
-yZad = ones(iterNum, 1)*Ypp;
-% yZad(1:600) = 35; %potem zmienic na 50
-yZad(20:iterNum) = 45;
-yZad = yZad - Ypp;
-Umin = 0-Upp;
-Umax = 100-Upp;
 
 %REGULATOR DMC -----------------------------------------------------
 %horyzonty
-D = 600;
-N = 600;
-Nu = 600;
+D = 182;
+N = 35;
+Nu = 2;
 lambda = 21;
 
 %PARAMETRY 
+y = zeros(iterNum,1);
+u = zeros(iterNum,1);
 du = 0;
+
 ypast = 0.0; %poprzednia wartosc wyjscia
 upast = 0.0; %poprzednia wartosc sterowania
 e = 0.0; %uchyb
 
-U = zeros(iterNum,1);
-Y = zeros(iterNum,1);
+U = ones(iterNum,1)*Upp;
+Y = ones(iterNum,1)*Ypp;
 dUpast = zeros(D-1, 1); %wektor przeszlych przyrostow sterowan
 
-%pobrac z Zad3
 
+%przypisanie odpowiedzi skokowej (znormalizowanej=
+st = Ynorm((chwila_skoku_U+1):300);
+%pobrac z Zad3
 
 % Macierz M
 M=zeros(N,Nu);
@@ -71,22 +64,35 @@ ke=sum(K(1,:));
 
 % -------------- DO REGULACJI ---------------
 
-for k = 10 : iterNum
+for k = 12 : iterNum
 
 
-ypast = Y(k-1);
-upast = U(k-1);
+    
+ypast = y(k-1);
+upast = u(k-1);
 
-% Y(k) = symulacja_obiektu3Y(U(k-10),U(k-11),Y(k-1),Y(k-2));
-Y(k) = b1* U(k - x(4) - 1) + b2 * U(k - x(4) - 2) - a1 * Y(k-1) - a2 * Y(k-2);
+Y(k) = symulacja_obiektu3Y(U(k-10),U(k-11),Y(k-1),Y(k-2));
+y(k) = Y(k) - Ypp;
 
-e = yZad(k) - Y(k);
+e = yZad(k) - y(k);
 
 ue = ke*e;
 uu = Ku*dUpast;
 
 du = ue-uu;
 u(k) = upast+du;
+
+U(k) = u(k) + Upp;
+
+    %ograniczenia na przyrosty sterowania
+    if du >= deltaUmax
+       U(k) = U(k-1) + deltaUmax;
+       du = deltaUmax;
+    elseif du <= -deltaUmax
+       U(k) = U(k-1) - deltaUmax;
+       du = -deltaUmax;
+    end
+
 
 if U(k) <  Umin 
      U(k) = Umin;
@@ -117,9 +123,21 @@ hold on;
 plot(yZad+Ypp);
 hold off;
 title(['Regulator DMC D=',sprintf('%g',D'),' N=',sprintf('%g',N),' Nu=',sprintf('%g',Nu),' lambda=',sprintf('%g',lambda)]);
-legend('y','yzad')
+legend('y','y_{zad}')
+xlabel('k');
+ylabel('y,y_{zad}');
+ylim([1.8 2.5]);
+xlim([0 1270]);
 subplot(2,1,2);
-plot(U);
+stairs(U);
+xlim([0 1270]);
+xlabel('k');
+ylabel('u');
+
+nazwa='regulator DMC D=' + sprintf('%g',D') +' N='+ sprintf('%g',N)+' Nu=' +sprintf('%g',Nu),' L=',sprintf('%g',lambda);
+%print (nazwa, '-dpng', '-r400')
+matlab2tikz(nazwa+'.tex', 'showInfo', false);
+
 
 %-----DO ZAPISYWANIA DO PLIKU-----------
 %-----GENEROWANIE Ku--------------------

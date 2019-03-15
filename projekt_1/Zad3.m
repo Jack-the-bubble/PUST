@@ -37,9 +37,9 @@ end
 %normalizacja odpowiedzi skokowej
 Ynorm = (Y - Ypp)./wartosc_skoku_U;
 
-kwyk = 1:1:iterNumSkok;
-figure
-stairs(kwyk, Ynorm);
-matlab2tikz('wykresy_dane/odp_skokowaDMC.tex', 'showInfo', false);
-xlabel('k');
-ylabel('Y');
+%kwyk = 1:1:iterNumSkok;
+%figure
+%stairs(kwyk, Ynorm);
+%matlab2tikz('wykresy_dane/odp_skokowaDMC.tex', 'showInfo', false);
+%xlabel('k');
+%ylabel('Y');
