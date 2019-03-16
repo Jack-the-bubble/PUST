@@ -42,10 +42,10 @@ yZad(1021:1270) = 2.15;
 yZad = yZad - Ypp;
 
 
-PID = fullfile('Zad4.m');
-run(PID);
-wskaznikPID = sum(((yZad+Ypp) - Ypid).^2);
-disp("Wskaznik jakosci regulacji dla regulatora PID: "+ wskaznikPID);
+% PID = fullfile('Zad4.m');
+% run(PID);
+% wskaznikPID = sum(((yZad+Ypp) - Ypid).^2);
+% disp("Wskaznik jakosci regulacji dla regulatora PID: "+ wskaznikPID);
 
 
 DMC = fullfile('Zad4DMCKamilMichal.m');

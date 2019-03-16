@@ -135,13 +135,21 @@ xlabel('k');
 legend('u');
 ylabel('u');
 
-nazwa = sprintf('regulator_DMC_D=%g_N=%g_Nu=%g_L=%g.tex',D,N,Nu,lambda);
-%print (nazwa, '-dpng', '-r400')
-matlab2tikz(nazwa,'showInfo',false);
+nazwa1 = sprintf('dane_zad_5/DMC/U__DMC_D=%g_N=%g_Nu=%g_L=%g.tex',D,N,Nu,lambda);
+nazwa2 = sprintf('dane_zad_5/DMC/Y__DMC_D=%g_N=%g_Nu=%g_L=%g.tex',D,N,Nu,lambda);
+nazwa3 = 'dane_zad_5/DMC/Yzad.txt';
 
+file = fopen(nazwa1, 'w');
+A = [(1:iterNum);U'];
+fprintf(file, '%4.3f %.3f \n',A);
+fclose(file);
 
-%-----DO ZAPISYWANIA DO PLIKU-----------
-%-----GENEROWANIE Ku--------------------
-%  file = fopen('Ku.txt', 'w');
-%  fprintf(file, '%.6f, \n', Ku');
-%  fclose(file);
+file = fopen(nazwa2, 'w');
+B = [(1:iterNum);Y'];
+fprintf(file, '%4.3f %.3f, \n',B);
+fclose(file);
+
+file = fopen(nazwa3, 'w');
+C = [(1:iterNum);(yZad+Ypp)'];
+fprintf(file, '%4.3f %.3f \n',C);
+fclose(file);

@@ -3,9 +3,9 @@
 %Symulacja cyfrowego algorytmu PID
 
 %nastawy i czas probkowania (TODO: pomy�le� o sekcjonowaniu kodu)
-K = 0.7;
 Ti = 24;
 Td = 3;
+K = 0.7;
 T = 0.5;
 
 
@@ -80,16 +80,13 @@ nazwa2 = sprintf('dane_zad_5/PID/Y__PID_K=%g_Ti=%g_Td=%g.txt',K,Ti,Td);
 nazwa3 = 'dane_zad_5/PID/Yzad.txt';
 
 file = fopen(nazwa1, 'w');
-A = [(1:iterNum);U'];
-fprintf(file, '%4.3f %.3f \n',A);
+fprintf(file, '%.3f %.3f \n',[(1:iterNum)';U']);
 fclose(file);
 
 file = fopen(nazwa2, 'w');
-B = [(1:iterNum);Y'];
-fprintf(file, '%4.3f %.3f, \n',B);
+fprintf(file, '%.3f %.3f, \n',[(1:iterNum)', Y']);
 fclose(file);
 
 file = fopen(nazwa3, 'w');
-C = [(1:iterNum);(yZad+Ypp)'];
-fprintf(file, '%4.3f %.3f \n',C);
+fprintf(file, '%.3f %.3f \n',[(1:iterNum)', (yZad+Ypp)']);
 fclose(file);
