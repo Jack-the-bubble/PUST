@@ -1,0 +1,244 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\sisetup{detect-weight,exponent-product=\cdot,output-decimal-marker={,},
+	per-mode=symbol,binary-units=true,range-phrase={-},range-units=single}
+\SendSettingsToPgf
+\usetikzlibrary{pgfplots.groupplots}
+\pgfplotsset{compat=1.10}
+\usepgfplotslibrary{external}
+\tikzexternalize
+
+\textwidth 160mm \textheight 247mm
+
+\pgfplotsset{width=\figurewidth,compat=1.10}
+\pgfplotsset{width=\figurewidth}
+\pgfplotsset{
+	tick label style={font=\tiny},
+	label style={font=\footnotesize},
+	legend style={font=\footnotesize},
+	title style={font=\footnotesize},
+}
+
+
+\newcommand{\szer}{16cm}
+\newcommand{\wys}{5.6cm}
+\newcommand{\odstepionowy}{1.2cm}
+
+\definecolor{kolor4}{rgb}{0,0,0.1724}
+\definecolor{kolor5}{rgb}{1.0000,0.1034,0.7241}
+\definecolor{kolor6}{rgb}{1.0000,0.8276,0}
+
+\begin{document}
+	
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{PID/PID_K=0.4_Ti=1e+06_Td=0}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=1270,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../PID/Y__PID_K=0.4_Ti=1e+06_Td=0.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../PID/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=1270, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../PID/U__PID_K=0.4_Ti=1e+06_Td=0.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{PID/PID_K=0.6_Ti=1e+06_Td=0}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=1270,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../PID/Y__PID_K=0.6_Ti=1e+06_Td=0.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../PID/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=1270, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../PID/U__PID_K=0.6_Ti=1e+06_Td=0.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{PID/PID_K=0.8_Ti=1e+06_Td=0}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=1270,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../PID/Y__PID_K=0.8_Ti=1e+06_Td=0.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../PID/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=1270, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../PID/U__PID_K=0.8_Ti=1e+06_Td=0.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{PID/PID_K=0.6_Ti=16_Td=0}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=1270,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../PID/Y__PID_K=0.6_Ti=16_Td=0.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../PID/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=1270, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../PID/U__PID_K=0.6_Ti=16_Td=0.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{PID/PID_K=0.6_Ti=36_Td=0}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=1270,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../PID/Y__PID_K=0.6_Ti=36_Td=0.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../PID/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=1270, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../PID/U__PID_K=0.6_Ti=36_Td=0.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{PID/PID_K=0.6_Ti=56_Td=0}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=1270,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../PID/Y__PID_K=0.6_Ti=56_Td=0.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../PID/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=1270, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../PID/U__PID_K=0.6_Ti=56_Td=0.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{PID/PID_K=0.6_Ti=36_Td=1}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=1270,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../PID/Y__PID_K=0.6_Ti=36_Td=1.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../PID/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=1270, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../PID/U__PID_K=0.6_Ti=36_Td=1.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+	
+	\tikzsetnextfilename{}
+	\begin{figure}[tb]
+		\centering
+		\tikzsetnextfilename{PID/PID_K=0.6_Ti=36_Td=3}
+		\begin{tikzpicture}
+		\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+		width=\szer,height=\wys]
+		\nextgroupplot
+		[xmin=0, xmax=1270,
+		xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+		\addplot[color=blue,semithick] file {../PID/Y__PID_K=0.6_Ti=36_Td=3.txt};
+		\addplot[const plot, color=red,semithick,densely dashed] file {../PID/Yzad.txt};
+		\legend{$y$,$y^{\mathrm{zad}}$}
+		\nextgroupplot
+		[xmin=0,xmax=1270, xlabel=$k$,ylabel=$u$]
+		\addplot[const plot, color=blue,semithick]
+		file {../PID/U__PID_K=0.6_Ti=36_Td=3.txt};
+		\end{groupplot}
+		\end{tikzpicture}
+\end{figure}
+
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{PID/PID_K=0.6_Ti=36_Td=5}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=1270,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../PID/Y__PID_K=0.6_Ti=36_Td=5.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../PID/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=1270, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../PID/U__PID_K=0.6_Ti=36_Td=5.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{PID/PID_K=0.7_Ti=24_Td=3}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=1270,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../PID/Y__PID_K=0.7_Ti=24_Td=3.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../PID/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=1270, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../PID/U__PID_K=0.7_Ti=24_Td=3.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+\end{document}
