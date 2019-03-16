@@ -75,21 +75,21 @@ xlabel('k');
 ylabel('u');
 
 
-nazwa1 = sprintf('dane_zad_5/PID/U__PID_K=%g_Ti=%g_Td=%g.txt',K,Ti,Td);
-nazwa2 = sprintf('dane_zad_5/PID/Y__PID_K=%g_Ti=%g_Td=%g.txt',K,Ti,Td);
-nazwa3 = 'dane_zad_5/PID/Yzad.txt';
-
-file = fopen(nazwa1, 'w');
-A = [(1:iterNum);U'];
-fprintf(file, '%4.3f %.3f \n',A);
-fclose(file);
-
-file = fopen(nazwa2, 'w');
-B = [(1:iterNum);Y'];
-fprintf(file, '%4.3f %.3f, \n',B);
-fclose(file);
-
-file = fopen(nazwa3, 'w');
-C = [(1:iterNum);(yZad+Ypp)'];
-fprintf(file, '%4.3f %.3f \n',C);
-fclose(file);
+% nazwa1 = sprintf('dane_zad_5/PID/U__PID_K=%g_Ti=%g_Td=%g.txt',K,Ti,Td);
+% nazwa2 = sprintf('dane_zad_5/PID/Y__PID_K=%g_Ti=%g_Td=%g.txt',K,Ti,Td);
+% nazwa3 = 'dane_zad_5/PID/Yzad.txt';
+% 
+% file = fopen(nazwa1, 'w');
+% A = [(1:iterNum);U'];
+% fprintf(file, '%4.3f %.3f \n',A);
+% fclose(file);
+% 
+% file = fopen(nazwa2, 'w');
+% B = [(1:iterNum);Y'];
+% fprintf(file, '%4.3f %.3f \n',B);
+% fclose(file);
+% 
+% file = fopen(nazwa3, 'w');
+% C = [(1:iterNum);(yZad+Ypp)'];
+% fprintf(file, '%4.3f %.3f \n',C);
+% fclose(file);

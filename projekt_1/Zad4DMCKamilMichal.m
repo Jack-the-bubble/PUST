@@ -14,7 +14,7 @@ clear U Y
 D = 182;
 N = 35;
 Nu = 2;
-lambda = 21;
+lambda = 40;
 
 %PARAMETRY 
 y = zeros(iterNum,1);
@@ -146,7 +146,7 @@ fclose(file);
 
 file = fopen(nazwa2, 'w');
 B = [(1:iterNum);Y'];
-fprintf(file, '%4.3f %.3f, \n',B);
+fprintf(file, '%4.3f %.3f \n',B);
 fclose(file);
 
 file = fopen(nazwa3, 'w');
