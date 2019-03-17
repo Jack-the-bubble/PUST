@@ -2,9 +2,6 @@
 load('step-response80.mat');
 
 %parametry
-% K=9; %najlepszy współczynnik jakości
-% Ti=50;
-% Td=0;
  K = 8; %stare
  Ti = 20;
  Td = 0;
@@ -38,10 +35,10 @@ u1=ones(length(step_response),1)*80;
 % 
 % figure (1);plot(G_y);hold on;step(Gtrans);hold off;hold on; step(G_d);hold off;
 % 
-%  a = G_d.Numerr{1}(2);
-%  d=G_d.Denominatorator{1}(2);
+%  a = G_d.Numerator{1}(2);
 %  b=G_d.Numerator{1}(3);
-%  c=G_d.Denominato{1}(3);
+%  c=G_d.Denominator{1}(2);
+%  d=G_d.Denominator{1}(3);
 
 % % stara transmitancja
 
@@ -52,8 +49,8 @@ u1=ones(length(step_response),1)*80;
  
 %PID-------------------------------------------------- 
  yZad = ones(iterNum, 1)*Ypp;
-yZad(20:iterNum) = 44;
-yZad(500:end) = 39;
+ yZad(1:600) = 45; %potem zmienic na 50
+ yZad(601:1200) = 45;
  yZad = yZad - Ypp;
  
  %wzorki
@@ -99,4 +96,4 @@ figure(2)
      stairs(U+Upp);
      
  wskaznikPID = sum(((yZad+Ypp) - (Y+Ypp)).^2);
- disp("Wskaznik jakosci regulacji dla regulatora PID: "+ wskaznikPID);
+  disp("Wskaznik jakosci regulacji dla regulatora DMC: "+ wskaznikDMC);
