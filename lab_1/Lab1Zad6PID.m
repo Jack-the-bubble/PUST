@@ -95,7 +95,7 @@ initSerialControl COM5 % initialise com port
         stairs(U(1:k));
         drawnow;
         
-        disp("U: " + U(k) +" Y: "+ Y(k) +" Yzad: "+ yZad(k)+Ypp);
+        disp('U: ' + U(k) +' Y: '+ Y(k) +' Yzad: '+ yZad(k)+Ypp);
     
         k = k+1;
         waitForNewIteration();

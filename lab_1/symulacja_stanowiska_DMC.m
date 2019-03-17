@@ -22,10 +22,19 @@ Umax = 100-Upp;
 
 %REGULATOR DMC -----------------------------------------------------
 %horyzonty
+
+% początkowe nastawy
+% D= 734;
+% N = 734;
+% Nu = 734;
+% lambda = 1;
+% najlepsze nastawy
+
 % D = 733;
 % N = 170;
 % Nu = 40;
 % lambda =2;
+
 
 %horyzonty
  D = 733;
@@ -112,7 +121,9 @@ end
 end
 
 %figure(1)
-%plot(U); hold on; plot(Y); hold off;hold on; plot(yZad+Ypp); hold off;    
+%plot(U); hold on; plot(Y); hold off;hold on; plot(yZad+Ypp); hold off;
+figure(1);
+plot(st);
 figure(2)   
 subplot(2,1,1);
 plot(Y+Ypp);
@@ -125,4 +136,4 @@ subplot(2,1,2);
 plot(U+Upp);
 
 wskaznikDMC = sum(((yZad+Ypp) - (Y+Ypp)).^2);
-disp("Wskaznik jakosci regulacji dla regulatora DMC: "+ wskaznikDMC);
+disp('Wskaznik jakosci regulacji dla regulatora DMC: '+ wskaznikDMC);

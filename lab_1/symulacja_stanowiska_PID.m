@@ -1,4 +1,7 @@
-% clear all
+% przed włączeniem symulacji należy uruchomić skrypt
+
+clear all
+run('Lab1Zad3b');
 load('step-response80.mat');
 
 %parametry
@@ -8,9 +11,12 @@ load('step-response80.mat');
  K = 8; %stare
  Ti = 20;
  Td = 0;
-%  K = 41; % najszybsza regulacja
-%  Ti = 11;
-%  Td = 11;
+%  pierwsze nastawy
+ K
+ 
+ K = 41; % najszybsza regulacja
+ Ti = 11;
+ Td = 11;
 
  T = 1;
 
@@ -97,6 +103,27 @@ figure(2)
      legend('y','yzad')
      subplot(2,1,2);
      stairs(U+Upp);
+<<<<<<< HEAD
+% nazwa1 = sprintf('dane_zad_5/PID/U__PID_K=%g_Ti=%g_Td=%g_model.txt',K,Ti,Td);
+% nazwa2 = sprintf('dane_zad_5/PID/Y__PID_K=%g_Ti=%g_Td=%g_model.txt',K,Ti,Td);
+% nazwa3 = 'dane_zad_5/PID/Yzad_model.txt';
+% 
+% file = fopen(nazwa1, 'w', 'b');
+% A = [(1:iterNum);U'];
+% fprintf(file, '%4.3f %.3f \n',A);
+% fclose(file);
+% 
+% file = fopen(nazwa2, 'w');
+% B = [(1:iterNum);Y'];
+% fprintf(file, '%4.3f %.3f \n',B);
+% fclose(file);
+% 
+% file = fopen(nazwa3, 'w');
+% C = [(1:iterNum);(yZad+Ypp)'];
+% fprintf(file, '%4.3f %.3f \n',C);
+% fclose(file);
+=======
      
  wskaznikPID = sum(((yZad+Ypp) - (Y+Ypp)).^2);
  disp("Wskaznik jakosci regulacji dla regulatora PID: "+ wskaznikPID);
+>>>>>>> ee9d364b5be7f8f143a8a41aa757685bab3b6796
