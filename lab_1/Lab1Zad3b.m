@@ -29,7 +29,7 @@ b = [100; 100; 100; 100; -0.1; -0.1; -0.1; -1];
 x0 = [76; 11; 0.1; 6];
 
 
-options = optimoptions(@fmincon, 'Algorithm', 'sqp', 'Display', 'iter');
+options = optimoptions(@fmincon, 'Algorithm', 'sqp', 'Display', 'off');
 
 x = fmincon(@model, x0, A, b, [], [], [], [], [], options);
 
@@ -69,9 +69,14 @@ load('step-response80.mat');
 
     end
     
-% figure(2)
-%      stairs(y);
-
+%  figure(2)
+%  hold on
+%       stairs(y);
+%       hold off;
+%       hold on;
+%       plot(Ynorm);
+%       hold off;
+ Ynorm=y;
          
 function error = model(param)
 
@@ -104,7 +109,7 @@ function error = model(param)
     end
     
     error = sum((Ynorm - y).^2);
-    disp('Wskaznik dopasowania: '+ error);
+    %disp('Wskaznik dopasowania: '+ error);
 end
 
 %dorobic optymalizacje i przedstawienie na wykresie

@@ -12,20 +12,20 @@ st = Ynorm(2:length(Ynorm));
 % podstawowe wartosci
 Upp = 28;
 Ypp = 35.62;
-iterNum = 900;
+iterNum = 12;
 yZad = ones(iterNum, 1)*Ypp;
-yZad(20:iterNum) = 45;
-yZad(500:end) = 37;
+yZad(20:iterNum) = 50;
+yZad(500:end) = 40; %potem zmienic na 50
 yZad = yZad - Ypp;
 Umin = 0-Upp;
 Umax = 100-Upp;
 
 %REGULATOR DMC -----------------------------------------------------
 %horyzonty
-D = 733;
-N = 170;
-Nu = 40;
-lambda =2;
+D = 600;
+N = 600;
+Nu = 600;
+lambda = 21;
 
 %PARAMETRY 
 du = 0;
@@ -115,6 +115,3 @@ title(['Regulator DMC D=',sprintf('%g',D'),' N=',sprintf('%g',N),' Nu=',sprintf(
 legend('y','yzad')
 subplot(2,1,2);
 plot(U+Upp);
-
-wskaznikDMC = sum(((yZad+Ypp) - (Y+Ypp)).^2);
-disp("Wskaznik jakosci regulacji dla regulatora DMC: "+ wskaznikDMC);

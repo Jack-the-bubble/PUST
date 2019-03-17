@@ -12,9 +12,9 @@ clear U Y
 %REGULATOR DMC -----------------------------------------------------
 %horyzonty
 D = 182;
-N = D;
-Nu = D;
-lambda = 1;
+N = 35;
+Nu = 2;
+lambda = 21;
 
 %PARAMETRY 
 y = zeros(iterNum,1);
@@ -135,21 +135,21 @@ xlabel('k');
 legend('u');
 ylabel('u');
 
-nazwa1 = sprintf('dane_zad_5/DMC/U__DMC_D=%g_N=%g_Nu=%g_L=%g.txt',D,N,Nu,lambda);
-nazwa2 = sprintf('dane_zad_5/DMC/Y__DMC_D=%g_N=%g_Nu=%g_L=%g.txt',D,N,Nu,lambda);
-nazwa3 = 'dane_zad_5/DMC/Yzad.txt';
-
-file = fopen(nazwa1, 'w');
-A = [(1:iterNum);U'];
-fprintf(file, '%4.3f %.3f \n',A);
-fclose(file);
-
-file = fopen(nazwa2, 'w');
-B = [(1:iterNum);Y'];
-fprintf(file, '%4.3f %.3f \n',B);
-fclose(file);
-
-file = fopen(nazwa3, 'w');
-C = [(1:iterNum);(yZad+Ypp)'];
-fprintf(file, '%4.3f %.3f \n',C);
-fclose(file);
+% nazwa1 = sprintf('dane_zad_5/DMC/U__DMC_D=%g_N=%g_Nu=%g_L=%g.txt',D,N,Nu,lambda);
+% nazwa2 = sprintf('dane_zad_5/DMC/Y__DMC_D=%g_N=%g_Nu=%g_L=%g.txt',D,N,Nu,lambda);
+% nazwa3 = 'dane_zad_5/DMC/Yzad.txt';
+% 
+% file = fopen(nazwa1, 'w');
+% A = [(1:iterNum);U'];
+% fprintf(file, '%4.3f %.3f \n',A);
+% fclose(file);
+% 
+% file = fopen(nazwa2, 'w');
+% B = [(1:iterNum);Y'];
+% fprintf(file, '%4.3f %.3f \n',B);
+% fclose(file);
+% 
+% file = fopen(nazwa3, 'w');
+% C = [(1:iterNum);(yZad+Ypp)'];
+% fprintf(file, '%4.3f %.3f \n',C);
+% fclose(file);
