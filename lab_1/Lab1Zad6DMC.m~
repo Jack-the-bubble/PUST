@@ -33,12 +33,12 @@ lambda =2;
 
 %PARAMETRY 
 du = 0;
+ypast = 0.0; %poprzednia wartosc wyjscia
 upast = 0.0; %poprzednia wartosc sterowania
 e = 0.0; %uchyb
 
- u = zeros(iterNum, 1);
- U = ones(iterNum, 1)*Upp; %zmienic tak, zeby bral od poczatku aktualne wartosci u i y
- Y = ones(iterNum, 1)*Ypp;
+U = zeros(iterNum,1);
+Y = zeros(iterNum,1);
 dUpast = zeros(D-1, 1); %wektor przeszlych przyrostow sterowan
 
 %pobrac z Zad3
@@ -75,12 +75,14 @@ ke=sum(K(1,:));
 % -------------- DO REGULACJI ---------------
 k=2
 while(1)
+
+ypast = y(k-1);
 upast = u(k-1);
 
 %pobranie wyjscia obiektu
 measurements = readMeasurements(1:7);
 Y(k)= measurements(1);
-y = Y(k)-Ypp;
+y(k) = Y(k)-Ypp;
 
 e = yZad(k) - y;
 
@@ -89,15 +91,12 @@ uu = Ku*dUpast;
 
 du = ue-uu;
 u(k) = upast+du;
-U(k) = u(k)+Upp;
 
 if U(k) <  Umin 
      U(k) = Umin;
-     du = Umin-U(k-1);
 
 elseif U(k) > Umax 
      U(k) = Umax;
-     du = Umax - U(k-1);
 
 end
 

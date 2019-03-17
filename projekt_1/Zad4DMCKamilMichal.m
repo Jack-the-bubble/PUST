@@ -12,9 +12,9 @@ clear U Y
 %REGULATOR DMC -----------------------------------------------------
 %horyzonty
 D = 182;
-N = 35;
-Nu = 2;
-lambda = 21;
+N = 182%35;
+Nu = 182%2;
+lambda = 1%21;
 
 %PARAMETRY 
 y = zeros(iterNum,1);
@@ -96,9 +96,11 @@ U(k) = u(k) + Upp;
 
 if U(k) <  Umin 
      U(k) = Umin;
+     du = Umin-U(k-1);
 
 elseif U(k) > Umax 
      U(k) = Umax;
+     du = Umax - U(k-1);
 
 end
 

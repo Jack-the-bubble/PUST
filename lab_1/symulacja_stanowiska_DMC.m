@@ -22,10 +22,16 @@ Umax = 100-Upp;
 
 %REGULATOR DMC -----------------------------------------------------
 %horyzonty
-D = 733;
-N = 170;
-Nu = 40;
-lambda =2;
+% D = 733;
+% N = 170;
+% Nu = 40;
+% lambda =2;
+
+%horyzonty
+ D = 733;
+ N = 150;
+ Nu = 15;
+ lambda =0.1;
 
 %PARAMETRY 
 du = 0;
@@ -88,9 +94,11 @@ U(k) = upast+du;
 
 if U(k) <  Umin 
      U(k) = Umin;
+     du = Umin-U(k-1);
 
 elseif U(k) > Umax 
      U(k) = Umax;
+     du = Umax - U(k-1);
 
 end
 
