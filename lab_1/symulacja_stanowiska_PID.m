@@ -30,31 +30,6 @@ u1=ones(length(step_response),1)*80;
  Upp = 28;
  Umin = 0 - Upp;
  Umax = 100 - Upp;
-% % normalizacja  
-% G_y = (y1 - Ypp)/52;
-% G_u = (u1 - Upp)/52;
-% % estymacja transmitancji
-% Grzalka = iddata(G_y, G_u, 1); % Zamiana I/O na obiekt na jakistam obiekt
-% Gtrans = tfest(Grzalka, 2,0)   % Estymowanie transmitancji
-% s = tf('s');
-% Gtrans = Gtrans*exp(-8*s);%prawdziwe opóźnienie
-% G_d = c2d(Gtrans,1,'zoh')
-% 
-% 
-% 
-% figure (1);plot(G_y);hold on;step(Gtrans);hold off;hold on; step(G_d);hold off;
-% 
-%  a = G_d.Numerr{1}(2);
-%  d=G_d.Denominatorator{1}(2);
-%  b=G_d.Numerator{1}(3);
-%  c=G_d.Denominato{1}(3);
-
-% % stara transmitancja
-
-% %nowa transmitancja
-% wykonac skrypt Lab1Zad3b
- 
- 
  
 %PID-------------------------------------------------- 
  yZad = ones(iterNum, 1)*Ypp;
@@ -103,7 +78,7 @@ figure(2)
      legend('y','yzad')
      subplot(2,1,2);
      stairs(U+Upp);
-<<<<<<< HEAD
+     
 % nazwa1 = sprintf('dane_zad_5/PID/U__PID_K=%g_Ti=%g_Td=%g_model.txt',K,Ti,Td);
 % nazwa2 = sprintf('dane_zad_5/PID/Y__PID_K=%g_Ti=%g_Td=%g_model.txt',K,Ti,Td);
 % nazwa3 = 'dane_zad_5/PID/Yzad_model.txt';
@@ -122,8 +97,7 @@ figure(2)
 % C = [(1:iterNum);(yZad+Ypp)'];
 % fprintf(file, '%4.3f %.3f \n',C);
 % fclose(file);
-=======
+
      
  wskaznikPID = sum(((yZad+Ypp) - (Y+Ypp)).^2);
  disp("Wskaznik jakosci regulacji dla regulatora PID: "+ wskaznikPID);
->>>>>>> ee9d364b5be7f8f143a8a41aa757685bab3b6796
