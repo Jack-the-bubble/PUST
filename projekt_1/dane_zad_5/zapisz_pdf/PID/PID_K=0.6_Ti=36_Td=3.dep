@@ -1,3 +1,0 @@
-PID/PID_K=0.6_Ti=36_Td=3.pdf: ../PID/Y__PID_K=0.6_Ti=36_Td=3.txt
-PID/PID_K=0.6_Ti=36_Td=3.pdf: ../PID/Yzad.txt
-PID/PID_K=0.6_Ti=36_Td=3.pdf: ../PID/U__PID_K=0.6_Ti=36_Td=3.txt

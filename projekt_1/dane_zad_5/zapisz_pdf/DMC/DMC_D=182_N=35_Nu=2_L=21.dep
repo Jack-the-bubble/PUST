@@ -1,0 +1,3 @@
+DMC/DMC_D=182_N=35_Nu=2_L=21.pdf: ../DMC/Y__DMC_D=182_N=35_Nu=2_L=21.txt
+DMC/DMC_D=182_N=35_Nu=2_L=21.pdf: ../DMC/Yzad.txt
+DMC/DMC_D=182_N=35_Nu=2_L=21.pdf: ../DMC/U__DMC_D=182_N=35_Nu=2_L=21.txt
