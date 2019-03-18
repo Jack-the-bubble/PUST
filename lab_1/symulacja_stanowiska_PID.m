@@ -5,27 +5,16 @@ run('Lab1Zad3b');
 load('step-response80.mat');
 
 %parametry
-% K=9; %najlepszy współczynnik jakości
-% Ti=50;
-% Td=0;
- K = 8; %stare
- Ti = 20;
- Td = 0;
-%  pierwsze nastawy
- K
- 
- K = 41; % najszybsza regulacja
- Ti = 11;
- Td = 11;
-
- T = 1;
-
+K=10; %najlepszy współczynnik jakości
+Ti=60;
+Td=0.25;
+T=1;
 
 %OBIEKT-------------------------------------------------
 y1=step_response';
 u1=ones(length(step_response),1)*80;
 %dane
- iterNum = 900;
+ iterNum = 620;
  Ypp = 35.62;
  Upp = 28;
  Umin = 0 - Upp;
@@ -33,8 +22,8 @@ u1=ones(length(step_response),1)*80;
  
 %PID-------------------------------------------------- 
  yZad = ones(iterNum, 1)*Ypp;
-yZad(20:iterNum) = 44;
-yZad(500:end) = 39;
+yZad(21:320) = 44;
+yZad(321:end) = 39;
  yZad = yZad - Ypp;
  
  %wzorki
@@ -68,6 +57,12 @@ for(k=3+x(4)+2:iterNum)% bylo 11
      
      
 end
+
+Y=Y(21:620);
+U=U(21:620);
+yZad=yZad(21:620);
+iterNum=600;
+
 figure(2)
      subplot(2,1,1);
      stairs(Y+Ypp);
@@ -79,24 +74,25 @@ figure(2)
      subplot(2,1,2);
      stairs(U+Upp);
      
-% nazwa1 = sprintf('dane_zad_5/PID/U__PID_K=%g_Ti=%g_Td=%g_model.txt',K,Ti,Td);
-% nazwa2 = sprintf('dane_zad_5/PID/Y__PID_K=%g_Ti=%g_Td=%g_model.txt',K,Ti,Td);
-% nazwa3 = 'dane_zad_5/PID/Yzad_model.txt';
-% 
-% file = fopen(nazwa1, 'w', 'b');
-% A = [(1:iterNum);U'];
-% fprintf(file, '%4.3f %.3f \n',A);
-% fclose(file);
-% 
-% file = fopen(nazwa2, 'w');
-% B = [(1:iterNum);Y'];
-% fprintf(file, '%4.3f %.3f \n',B);
-% fclose(file);
-% 
-% file = fopen(nazwa3, 'w');
-% C = [(1:iterNum);(yZad+Ypp)'];
-% fprintf(file, '%4.3f %.3f \n',C);
-% fclose(file);
+ nazwa1 = sprintf('U__PID_K=%g_Ti=%g_Td=%g_sym.txt',K,Ti,Td);
+ nazwa2 = sprintf('Y__PID_K=%g_Ti=%g_Td=%g_sym.txt',K,Ti,Td);
+ nazwa3 = 'Yzad_sym.txt';
+ 
+ file = fopen(nazwa1, 'w');
+ A = [(1:iterNum);(U+Upp)'];
+ fprintf(file, '%4.3f %.3f \n',A);
+ fclose(file);
+ 
+file = fopen(nazwa2, 'w');
+B = [(1:iterNum);(Y+Ypp)'];
+fprintf(file, '%4.3f %.3f \n',B);
+fclose(file);
+
+file = fopen(nazwa3, 'w');
+C = [(1:iterNum);(yZad+Ypp)'];
+fprintf(file, '%4.3f %.3f \n',C);
+fclose(file);
+
 
      
  wskaznikPID = sum(((yZad+Ypp) - (Y+Ypp)).^2);

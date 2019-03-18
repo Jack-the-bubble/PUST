@@ -12,10 +12,10 @@ st = Ynorm(2:length(Ynorm));
 % podstawowe wartosci
 Upp = 28;
 Ypp = 35.62;
-iterNum = 900;
+iterNum = 620;
 yZad = ones(iterNum, 1)*Ypp;
-yZad(20:iterNum) = 44;
-yZad(500:end) = 39;
+yZad(21:320) = 44;
+yZad(321:end) = 39;
 yZad = yZad - Ypp;
 Umin = 0-Upp;
 Umax = 100-Upp;
@@ -37,10 +37,10 @@ Umax = 100-Upp;
 
 
 %horyzonty
- D = 733;
+ D = 734;
  N = 150;
  Nu = 15;
- lambda =0.1;
+ lambda = 0.1;
 
 %PARAMETRY 
 du = 0;
@@ -120,6 +120,11 @@ end
     dUpast = [du; dUpast(1:end-1)];       
 end
 
+Y=Y(21:620);
+U=U(21:620);
+yZad=yZad(21:620);
+iterNum=600;
+
 %figure(1)
 %plot(U); hold on; plot(Y); hold off;hold on; plot(yZad+Ypp); hold off;
 figure(1);
@@ -136,4 +141,23 @@ subplot(2,1,2);
 plot(U+Upp);
 
 wskaznikDMC = sum(((yZad+Ypp) - (Y+Ypp)).^2);
-disp('Wskaznik jakosci regulacji dla regulatora DMC: '+ wskaznikDMC);
+disp(wskaznikDMC);
+
+nazwa1 = sprintf('U__DMC_D=%g_N=%g_Nu=%g_L=%g_sym.txt',D,N,Nu,lambda);
+nazwa2 = sprintf('Y__DMC_D=%g_N=%g_Nu=%g_L=%g_sym.txt',D,N,Nu,lambda);
+nazwa3 = 'Yzad_sym.txt';
+
+file = fopen(nazwa1, 'w');
+A = [(1:iterNum);(U+Upp)'];
+fprintf(file, '%4.3f %.3f \n',A);
+fclose(file);
+
+file = fopen(nazwa2, 'w');
+B = [(1:iterNum);(Y+Ypp)'];
+fprintf(file, '%4.3f %.3f \n',B);
+fclose(file);
+
+file = fopen(nazwa3, 'w');
+C = [(1:iterNum);(yZad+Ypp)'];
+fprintf(file, '%4.3f %.3f \n',C);
+fclose(file);

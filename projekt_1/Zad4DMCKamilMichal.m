@@ -12,9 +12,9 @@ clear U Y
 %REGULATOR DMC -----------------------------------------------------
 %horyzonty
 D = 182;
-N = 182%35;
-Nu = 182%2;
-lambda = 1%21;
+N = 48;%35;
+Nu = 2;%2;
+lambda = 6;%21;
 
 %PARAMETRY 
 y = zeros(iterNum,1);
