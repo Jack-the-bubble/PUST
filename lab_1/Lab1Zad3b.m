@@ -69,15 +69,29 @@ load('step-response80.mat');
 
     end
     
-%  figure(2)
-%  hold on
-%       stairs(y);
-%       hold off;
-%       hold on;
-%       plot(Ynorm);
-%       hold off;
- Ynorm=y;
-         
+ figure(2)
+ hold on
+      stairs(y);
+      hold off;
+      hold on;
+      plot(Ynorm);
+      hold off;
+ %Ynorm=y;
+ 
+ 
+ nazwa1 = 'lab_odp_rzecz.txt';
+ nazwa2 ='lab_odp_mod.txt';
+ 
+ file = fopen(nazwa1, 'w');
+ A = [(1:993);y];
+ fprintf(file, '%4.3f %.3f \n',A);
+ fclose(file);
+ 
+file = fopen(nazwa2, 'w');
+B = [(1:993);Ynorm];
+fprintf(file, '%4.3f %.3f \n',B);
+fclose(file);
+      
 function error = model(param)
 
     load('step-response80.mat');
