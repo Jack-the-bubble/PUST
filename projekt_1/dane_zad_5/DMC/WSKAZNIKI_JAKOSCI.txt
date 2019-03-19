@@ -1,0 +1,14 @@
+DMC
+D=182, N=D, Nu=D, lambda=1 E=2.841
+D=182, N=68, Nu=N, lambda=1 E=2.841
+D=182, N=48, Nu=N, lambda=1 E=2.8409
+D=182, N=28, Nu=N, lambda=1 E=3.8338
+
+D=182, N=48, Nu=1, lambda=1 E=3.9349
+D=182, N=48, Nu=2, lambda=1 E=3.0902
+D=182, N=48, Nu=3, lambda=1 E=3.2306
+D=182, N=48, Nu=5, lambda=1 E=7.9199
+
+D=182, N=48, Nu=2, lambda=10 E=2.7645
+D=182, N=48, Nu=2, lambda=100 E=3.0424
+D=182, N=48, Nu=2, lambda=6 E=2.7369

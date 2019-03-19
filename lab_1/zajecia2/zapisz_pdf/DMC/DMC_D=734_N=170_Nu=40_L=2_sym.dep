@@ -1,0 +1,3 @@
+DMC/DMC_D=734_N=170_Nu=40_L=2_sym.pdf: ../DMC_sym/Y__DMC_D=734_N=170_Nu=40_L=2_sym.txt
+DMC/DMC_D=734_N=170_Nu=40_L=2_sym.pdf: ../DMC_sym/Yzad_sym.txt
+DMC/DMC_D=734_N=170_Nu=40_L=2_sym.pdf: ../DMC_sym/U__DMC_D=734_N=170_Nu=40_L=2_sym.txt

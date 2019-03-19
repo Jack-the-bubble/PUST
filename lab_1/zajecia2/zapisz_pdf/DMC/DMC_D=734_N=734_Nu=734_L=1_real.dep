@@ -1,0 +1,3 @@
+DMC/DMC_D=734_N=734_Nu=734_L=1_real.pdf: ../DMC/Y__DMC_D=734_N=734_Nu=734_L=1_real.txt
+DMC/DMC_D=734_N=734_Nu=734_L=1_real.pdf: ../DMC/Yzad_real.txt
+DMC/DMC_D=734_N=734_Nu=734_L=1_real.pdf: ../DMC/U__DMC_D=734_N=734_Nu=734_L=1_real.txt

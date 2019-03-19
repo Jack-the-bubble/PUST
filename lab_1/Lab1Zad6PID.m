@@ -1,6 +1,6 @@
 %PUST Projekt 1 Lab1
 %Zadanie 6
-%Funkcja obliczajšca b³šd PID
+%Funkcja obliczajï¿½ca bï¿½ï¿½d PID
 
 addpath('F:\SerialCommunication'); % add a path to the functions
 initSerialControl COM5 % initialise com port
@@ -29,6 +29,8 @@ initSerialControl COM5 % initialise com port
     %deltaUmax = 0.05;
 
     yZad = ones(iterNum, 1)*Ypp;
+%     yZad(20:iterNum) = 44;
+%     yZad(500:end) = 39;
     yZad(1:600) = 35; %potem zmienic na 50
     yZad(601:1200) = 45;
     yZad = yZad - Ypp;
@@ -93,7 +95,7 @@ initSerialControl COM5 % initialise com port
         stairs(U(1:k));
         drawnow;
         
-        disp("U: " + U(k) +" Y: "+ Y(k) +" Yzad: "+ yZad(k)+Ypp);
+        disp('U: ' + U(k) +' Y: '+ Y(k) +' Yzad: '+ yZad(k)+Ypp);
     
         k = k+1;
         waitForNewIteration();

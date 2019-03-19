@@ -12,20 +12,35 @@ st = Ynorm(2:length(Ynorm));
 % podstawowe wartosci
 Upp = 28;
 Ypp = 35.62;
-iterNum = 900;
+iterNum = 620;
 yZad = ones(iterNum, 1)*Ypp;
-% yZad(1:600) = 35; %potem zmienic na 50
-yZad(20:iterNum) = 40;
+yZad(21:320) = 44;
+yZad(321:end) = 39;
 yZad = yZad - Ypp;
 Umin = 0-Upp;
 Umax = 100-Upp;
 
 %REGULATOR DMC -----------------------------------------------------
 %horyzonty
-D = 600;
-N = 600;
-Nu = 600;
-lambda = 21;
+
+% początkowe nastawy
+% D= 734;
+% N = 734;
+% Nu = 734;
+% lambda = 1;
+% najlepsze nastawy
+
+% D = 733;
+% N = 170;
+% Nu = 40;
+% lambda =2;
+
+
+%horyzonty
+ D = 734;
+ N = 150;
+ Nu = 15;
+ lambda = 0.1;
 
 %PARAMETRY 
 du = 0;
@@ -88,9 +103,11 @@ U(k) = upast+du;
 
 if U(k) <  Umin 
      U(k) = Umin;
+     du = Umin-U(k-1);
 
 elseif U(k) > Umax 
      U(k) = Umax;
+     du = Umax - U(k-1);
 
 end
 
@@ -103,8 +120,15 @@ end
     dUpast = [du; dUpast(1:end-1)];       
 end
 
+Y=Y(21:620);
+U=U(21:620);
+yZad=yZad(21:620);
+iterNum=600;
+
 %figure(1)
-%plot(U); hold on; plot(Y); hold off;hold on; plot(yZad+Ypp); hold off;    
+%plot(U); hold on; plot(Y); hold off;hold on; plot(yZad+Ypp); hold off;
+figure(1);
+plot(st);
 figure(2)   
 subplot(2,1,1);
 plot(Y+Ypp);
@@ -115,3 +139,25 @@ title(['Regulator DMC D=',sprintf('%g',D'),' N=',sprintf('%g',N),' Nu=',sprintf(
 legend('y','yzad')
 subplot(2,1,2);
 plot(U+Upp);
+
+wskaznikDMC = sum(((yZad+Ypp) - (Y+Ypp)).^2);
+disp(wskaznikDMC);
+
+nazwa1 = sprintf('U__DMC_D=%g_N=%g_Nu=%g_L=%g_sym.txt',D,N,Nu,lambda);
+nazwa2 = sprintf('Y__DMC_D=%g_N=%g_Nu=%g_L=%g_sym.txt',D,N,Nu,lambda);
+nazwa3 = 'Yzad_sym.txt';
+
+file = fopen(nazwa1, 'w');
+A = [(1:iterNum);(U+Upp)'];
+fprintf(file, '%4.3f %.3f \n',A);
+fclose(file);
+
+file = fopen(nazwa2, 'w');
+B = [(1:iterNum);(Y+Ypp)'];
+fprintf(file, '%4.3f %.3f \n',B);
+fclose(file);
+
+file = fopen(nazwa3, 'w');
+C = [(1:iterNum);(yZad+Ypp)'];
+fprintf(file, '%4.3f %.3f \n',C);
+fclose(file);

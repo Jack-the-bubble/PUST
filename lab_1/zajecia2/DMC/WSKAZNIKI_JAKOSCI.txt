@@ -1,0 +1,4 @@
+DMC
+D=734 , N=D, Nu=D, lambda=1 E=3120.4
+D=734 , N=170 , Nu=40 , lambda=2  E=3314.1
+D=734 , N=150 , Nu=15 , lambda=0.1  E=2891.8
