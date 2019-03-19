@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  17 MAR 2019 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  19 MAR 2019 00:20
 entering extended mode
 **./PID_PDF_GENERATOR.tex
 (PID_PDF_GENERATOR.tex
@@ -952,117 +952,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 32.
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
 
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "PID/PID_K=0_4_Ti=1e+06_Td=0" "\def\tik
-zexternalrealjob{PID_PDF_GENERATOR}\input{PID_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "PID/PID_K=0_4_Ti=1e+06_Td=0" "\def\tikzexternalrealjob{PID_PDF_GENERATOR}\inp
-ut{PID_PDF_GENERATOR}")...executed.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "PID/PID_K=0_6_Ti=1e+06_Td=0" "\def\tik
-zexternalrealjob{PID_PDF_GENERATOR}\input{PID_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "PID/PID_K=0_6_Ti=1e+06_Td=0" "\def\tikzexternalrealjob{PID_PDF_GENERATOR}\inp
-ut{PID_PDF_GENERATOR}")...executed.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "PID/PID_K=0_8_Ti=1e+06_Td=0" "\def\tik
-zexternalrealjob{PID_PDF_GENERATOR}\input{PID_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "PID/PID_K=0_8_Ti=1e+06_Td=0" "\def\tikzexternalrealjob{PID_PDF_GENERATOR}\inp
-ut{PID_PDF_GENERATOR}")...executed.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "PID/PID_K=0_6_Ti=16_Td=0" "\def\tikzex
-ternalrealjob{PID_PDF_GENERATOR}\input{PID_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "PID/PID_K=0_6_Ti=16_Td=0" "\def\tikzexternalrealjob{PID_PDF_GENERATOR}\input{
-PID_PDF_GENERATOR}")...executed.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "PID/PID_K=0_6_Ti=36_Td=0" "\def\tikzex
-ternalrealjob{PID_PDF_GENERATOR}\input{PID_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "PID/PID_K=0_6_Ti=36_Td=0" "\def\tikzexternalrealjob{PID_PDF_GENERATOR}\input{
-PID_PDF_GENERATOR}")...executed.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "PID/PID_K=0_6_Ti=56_Td=0" "\def\tikzex
-ternalrealjob{PID_PDF_GENERATOR}\input{PID_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "PID/PID_K=0_6_Ti=56_Td=0" "\def\tikzexternalrealjob{PID_PDF_GENERATOR}\input{
-PID_PDF_GENERATOR}")...executed.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "PID/PID_K=0_6_Ti=36_Td=1" "\def\tikzex
-ternalrealjob{PID_PDF_GENERATOR}\input{PID_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "PID/PID_K=0_6_Ti=36_Td=1" "\def\tikzexternalrealjob{PID_PDF_GENERATOR}\input{
-PID_PDF_GENERATOR}")...executed.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "PID/PID_K=0_6_Ti=36_Td=3" "\def\tikzex
-ternalrealjob{PID_PDF_GENERATOR}\input{PID_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "PID/PID_K=0_6_Ti=36_Td=3" "\def\tikzexternalrealjob{PID_PDF_GENERATOR}\input{
-PID_PDF_GENERATOR}")...executed.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "PID/PID_K=0_6_Ti=36_Td=5" "\def\tikzex
-ternalrealjob{PID_PDF_GENERATOR}\input{PID_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "PID/PID_K=0_6_Ti=36_Td=5" "\def\tikzexternalrealjob{PID_PDF_GENERATOR}\input{
-PID_PDF_GENERATOR}")...executed.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "PID/PID_K=0_7_Ti=24_Td=3" "\def\tikzex
-ternalrealjob{PID_PDF_GENERATOR}\input{PID_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "PID/PID_K=0_7_Ti=24_Td=3" "\def\tikzexternalrealjob{PID_PDF_GENERATOR}\input{
-PID_PDF_GENERATOR}")...executed.
-
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
-
+===== Image 'PID/PID_K=0_4_Ti=1e+06_Td=0' is up-to-date. ======
+===== Image 'PID/PID_K=0_6_Ti=1e+06_Td=0' is up-to-date. ======
+===== Image 'PID/PID_K=0_8_Ti=1e+06_Td=0' is up-to-date. ======
+===== Image 'PID/PID_K=0_6_Ti=16_Td=0' is up-to-date. ======
+===== Image 'PID/PID_K=0_6_Ti=36_Td=0' is up-to-date. ======
+===== Image 'PID/PID_K=0_6_Ti=56_Td=0' is up-to-date. ======
+===== Image 'PID/PID_K=0_6_Ti=36_Td=1' is up-to-date. ======
+===== Image 'PID/PID_K=0_6_Ti=36_Td=3' is up-to-date. ======
+===== Image 'PID/PID_K=0_6_Ti=36_Td=5' is up-to-date. ======
+===== Image 'PID/PID_K=0_7_Ti=24_Td=3' is up-to-date. ======
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
 [1{C:/Users/Michal/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./PID/PI
 D_K=0_4_Ti=1e+06_Td=0.pdf> <./PID/PID_K=0_6_Ti=1e+06_Td=0.pdf>] [2 <./PID/PID_K
@@ -1077,9 +977,9 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 244.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
  ) 
 Here is how much of TeX's memory you used:
- 33891 strings out of 492946
- 849587 string characters out of 3125823
- 925969 words of memory out of 3000000
+ 33888 strings out of 492946
+ 849574 string characters out of 3125823
+ 925967 words of memory out of 3000000
  37360 multiletter control sequences out of 15000+200000
  536486 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191

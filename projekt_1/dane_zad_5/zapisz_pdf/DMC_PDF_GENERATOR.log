@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  17 MAR 2019 11:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  19 MAR 2019 00:23
 entering extended mode
 **./DMC_PDF_GENERATOR.tex
 (DMC_PDF_GENERATOR.tex
@@ -952,6 +952,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 32.
+\openout3 = `DMC/DMC_D=182_N=182_Nu=182_L=1.md5'.
+
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
 
@@ -964,148 +966,141 @@ input{DMC_PDF_GENERATOR}")...executed.
 
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
+\openout3 = `DMC/DMC_D=182_N=28_Nu=28_L=1.md5'.
+
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=30_Nu=30_L=1" "\def\ti
+n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=28_Nu=28_L=1" "\def\ti
 kzexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
 runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "DMC/DMC_D=182_N=30_Nu=30_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\in
+ "DMC/DMC_D=182_N=28_Nu=28_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\in
 put{DMC_PDF_GENERATOR}")...executed.
 
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
+\openout3 = `DMC/DMC_D=182_N=48_Nu=48_L=1.md5'.
+
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=35_Nu=35_L=1" "\def\ti
+n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=48_Nu=48_L=1" "\def\ti
 kzexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
 runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "DMC/DMC_D=182_N=35_Nu=35_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\in
+ "DMC/DMC_D=182_N=48_Nu=48_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\in
 put{DMC_PDF_GENERATOR}")...executed.
 
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
+\openout3 = `DMC/DMC_D=182_N=68_Nu=68_L=1.md5'.
+
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=45_Nu=45_L=1" "\def\ti
+n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=68_Nu=68_L=1" "\def\ti
 kzexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
 runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "DMC/DMC_D=182_N=45_Nu=45_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\in
+ "DMC/DMC_D=182_N=68_Nu=68_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\in
 put{DMC_PDF_GENERATOR}")...executed.
 
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
+\openout3 = `DMC/DMC_D=182_N=48_Nu=5_L=1.md5'.
+
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=35_Nu=1_L=1" "\def\tik
+n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=48_Nu=5_L=1" "\def\tik
 zexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
 runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "DMC/DMC_D=182_N=35_Nu=1_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\inp
+ "DMC/DMC_D=182_N=48_Nu=5_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\inp
 ut{DMC_PDF_GENERATOR}")...executed.
 
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
+\openout3 = `DMC/DMC_D=182_N=48_Nu=2_L=1.md5'.
+
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=35_Nu=2_L=1" "\def\tik
+n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=48_Nu=2_L=1" "\def\tik
 zexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
 runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "DMC/DMC_D=182_N=35_Nu=2_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\inp
+ "DMC/DMC_D=182_N=48_Nu=2_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\inp
 ut{DMC_PDF_GENERATOR}")...executed.
 
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
+\openout3 = `DMC/DMC_D=182_N=48_Nu=1_L=1.md5'.
+
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=35_Nu=3_L=1" "\def\tik
+n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=48_Nu=1_L=1" "\def\tik
 zexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
 runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "DMC/DMC_D=182_N=35_Nu=3_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\inp
+ "DMC/DMC_D=182_N=48_Nu=1_L=1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\inp
 ut{DMC_PDF_GENERATOR}")...executed.
 
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
+\openout3 = `DMC/DMC_D=182_N=48_Nu=2_L=6.md5'.
+
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=35_Nu=2_L=0_1" "\def\t
+n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=48_Nu=2_L=6" "\def\tik
+zexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "DMC/DMC_D=182_N=48_Nu=2_L=6" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\inp
+ut{DMC_PDF_GENERATOR}")...executed.
+
+\openout3 = `DMC_PDF_GENERATOR.auxlock'.
+
+\openout3 = `DMC/DMC_D=182_N=48_Nu=2_L=10.md5'.
+
+\openout3 = `DMC_PDF_GENERATOR.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=48_Nu=2_L=10" "\def\ti
+kzexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "DMC/DMC_D=182_N=48_Nu=2_L=10" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\in
+put{DMC_PDF_GENERATOR}")...executed.
+
+\openout3 = `DMC_PDF_GENERATOR.auxlock'.
+
+\openout3 = `DMC/DMC_D=182_N=48_Nu=2_L=100.md5'.
+
+\openout3 = `DMC_PDF_GENERATOR.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=48_Nu=2_L=100" "\def\t
 ikzexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
 runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "DMC/DMC_D=182_N=35_Nu=2_L=0_1" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\i
+ "DMC/DMC_D=182_N=48_Nu=2_L=100" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\i
 nput{DMC_PDF_GENERATOR}")...executed.
 
 \openout3 = `DMC_PDF_GENERATOR.auxlock'.
 
-\openout3 = `DMC_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=35_Nu=2_L=10" "\def\ti
-kzexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "DMC/DMC_D=182_N=35_Nu=2_L=10" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\in
-put{DMC_PDF_GENERATOR}")...executed.
-
-\openout3 = `DMC_PDF_GENERATOR.auxlock'.
-
-\openout3 = `DMC_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=35_Nu=2_L=21" "\def\ti
-kzexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "DMC/DMC_D=182_N=35_Nu=2_L=21" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\in
-put{DMC_PDF_GENERATOR}")...executed.
-
-\openout3 = `DMC_PDF_GENERATOR.auxlock'.
-
-\openout3 = `DMC_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=35_Nu=2_L=40" "\def\ti
-kzexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "DMC/DMC_D=182_N=35_Nu=2_L=40" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\in
-put{DMC_PDF_GENERATOR}")...executed.
-
-\openout3 = `DMC_PDF_GENERATOR.auxlock'.
-
-\openout3 = `DMC/DMC_D=182_N=35_Nu=2_L=100.md5'.
-
-\openout3 = `DMC_PDF_GENERATOR.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "DMC/DMC_D=182_N=35_Nu=2_L=100" "\def\t
-ikzexternalrealjob{DMC_PDF_GENERATOR}\input{DMC_PDF_GENERATOR}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "DMC/DMC_D=182_N=35_Nu=2_L=100" "\def\tikzexternalrealjob{DMC_PDF_GENERATOR}\i
-nput{DMC_PDF_GENERATOR}")...executed.
-
-\openout3 = `DMC_PDF_GENERATOR.auxlock'.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
 [1{C:/Users/Michal/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./DMC/DM
-C_D=182_N=182_Nu=182_L=1.pdf> <./DMC/DMC_D=182_N=30_Nu=30_L=1.pdf>] [2 <./DMC/D
-MC_D=182_N=35_Nu=35_L=1.pdf> <./DMC/DMC_D=182_N=45_Nu=45_L=1.pdf>] [3 <./DMC/DM
-C_D=182_N=35_Nu=1_L=1.pdf> <./DMC/DMC_D=182_N=35_Nu=2_L=1.pdf>] [4 <./DMC/DMC_D
-=182_N=35_Nu=3_L=1.pdf> <./DMC/DMC_D=182_N=35_Nu=2_L=0_1.pdf>] [5 <./DMC/DMC_D=
-182_N=35_Nu=2_L=10.pdf> <./DMC/DMC_D=182_N=35_Nu=2_L=21.pdf>] [6 <./DMC/DMC_D=1
-82_N=35_Nu=2_L=40.pdf> <./DMC/DMC_D=182_N=35_Nu=2_L=100.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
+C_D=182_N=182_Nu=182_L=1.pdf> <./DMC/DMC_D=182_N=28_Nu=28_L=1.pdf>] [2 <./DMC/D
+MC_D=182_N=48_Nu=48_L=1.pdf> <./DMC/DMC_D=182_N=68_Nu=68_L=1.pdf>] [3 <./DMC/DM
+C_D=182_N=48_Nu=5_L=1.pdf> <./DMC/DMC_D=182_N=48_Nu=2_L=1.pdf>] [4 <./DMC/DMC_D
+=182_N=48_Nu=1_L=1.pdf> <./DMC/DMC_D=182_N=48_Nu=2_L=6.pdf>] [5 <./DMC/DMC_D=18
+2_N=48_Nu=2_L=10.pdf> <./DMC/DMC_D=182_N=48_Nu=2_L=100.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
 
 (DMC_PDF_GENERATOR.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 286.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 244.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
  ) 
 Here is how much of TeX's memory you used:
- 33893 strings out of 492946
- 849667 string characters out of 3125823
- 925969 words of memory out of 3000000
+ 33888 strings out of 492946
+ 849604 string characters out of 3125823
+ 925967 words of memory out of 3000000
  37360 multiletter control sequences out of 15000+200000
  536486 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1115,9 +1110,9 @@ s/cm/cmmi6.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmmi9.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Michal/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb>
-Output written on DMC_PDF_GENERATOR.pdf (6 pages, 437155 bytes).
+Output written on DMC_PDF_GENERATOR.pdf (5 pages, 386163 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
+ 144 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

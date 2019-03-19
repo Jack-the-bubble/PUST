@@ -1,0 +1,160 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\sisetup{detect-weight,exponent-product=\cdot,output-decimal-marker={,},
+	per-mode=symbol,binary-units=true,range-phrase={-},range-units=single}
+\SendSettingsToPgf
+\usetikzlibrary{pgfplots.groupplots}
+\pgfplotsset{compat=1.10}
+\usepgfplotslibrary{external}
+\tikzexternalize
+
+\textwidth 160mm \textheight 247mm
+
+\pgfplotsset{width=\figurewidth,compat=1.10}
+\pgfplotsset{width=\figurewidth}
+\pgfplotsset{
+	tick label style={font=\tiny},
+	label style={font=\footnotesize},
+	legend style={font=\footnotesize},
+	title style={font=\footnotesize},
+}
+
+
+\newcommand{\szer}{16cm}
+\newcommand{\wys}{5.6cm}
+\newcommand{\odstepionowy}{1.2cm}
+
+\definecolor{kolor4}{rgb}{0,0,0.1724}
+\definecolor{kolor5}{rgb}{1.0000,0.1034,0.7241}
+\definecolor{kolor6}{rgb}{1.0000,0.8276,0}
+
+\begin{document}
+		
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{DMC/DMC_D=734_N=734_Nu=734_L=1_real}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=600,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../DMC/Y__DMC_D=734_N=734_Nu=734_L=1_real.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC/Yzad_real.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=600, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC/U__DMC_D=734_N=734_Nu=734_L=1_real.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{DMC/DMC_D=734_N=170_Nu=40_L=2_real}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=600,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../DMC/Y__DMC_D=734_N=170_Nu=40_L=2_real.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC/Yzad_real.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=600, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC/U__DMC_D=734_N=170_Nu=40_L=2_real.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{DMC/DMC_D=734_N=150_Nu=15_L=0_1_real}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=600,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../DMC/Y__DMC_D=734_N=150_Nu=15_L=0.1_real.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC/Yzad_real.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=600, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC/U__DMC_D=734_N=150_Nu=15_L=0.1_real.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{DMC/DMC_D=734_N=734_Nu=734_L=1_sym}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=600,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../DMC_sym/Y__DMC_D=734_N=734_Nu=734_L=1_sym.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_sym/Yzad_sym.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=600, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_sym/U__DMC_D=734_N=734_Nu=734_L=1_sym.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{DMC/DMC_D=734_N=170_Nu=40_L=2_sym}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=600,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../DMC_sym/Y__DMC_D=734_N=170_Nu=40_L=2_sym.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_sym/Yzad_sym.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=600, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_sym/U__DMC_D=734_N=170_Nu=40_L=2_sym.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{DMC/DMC_D=734_N=150_Nu=15_L=0_1_sym}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=600,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../DMC_sym/Y__DMC_D=734_N=150_Nu=15_L=0.1_sym.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_sym/Yzad_sym.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=600, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_sym/U__DMC_D=734_N=150_Nu=15_L=0.1_sym.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\end{document}

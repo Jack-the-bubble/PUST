@@ -1,0 +1,3 @@
+PID/PID_K=10_Ti=60_Td=0_25_sym.pdf: ../PID_sym/Y__PID_K=10_Ti=60_Td=0.25_sym.txt
+PID/PID_K=10_Ti=60_Td=0_25_sym.pdf: ../PID_sym/Yzad_sym.txt
+PID/PID_K=10_Ti=60_Td=0_25_sym.pdf: ../PID_sym/U__PID_K=10_Ti=60_Td=0.25_sym.txt
