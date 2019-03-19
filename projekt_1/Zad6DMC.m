@@ -117,9 +117,11 @@ function error = Zad6DMC(x)
 
     if U(k) <  Umin 
          U(k) = Umin;
+         du = Umin - U(k-1);
 
     elseif U(k) > Umax 
          U(k) = Umax;
+         du = Umax - U(k-1);
 
     end
 
