@@ -1,0 +1,132 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\sisetup{detect-weight,exponent-product=\cdot,output-decimal-marker={,},
+	per-mode=symbol,binary-units=true,range-phrase={-},range-units=single}
+\SendSettingsToPgf
+\usetikzlibrary{pgfplots.groupplots}
+\pgfplotsset{compat=1.10}
+\usepgfplotslibrary{external}
+\tikzexternalize
+
+\textwidth 160mm \textheight 247mm
+
+\pgfplotsset{width=\figurewidth,compat=1.10}
+\pgfplotsset{width=\figurewidth}
+\pgfplotsset{
+	tick label style={font=\tiny},
+	label style={font=\footnotesize},
+	legend style={font=\footnotesize},
+	title style={font=\footnotesize},
+}
+
+
+\newcommand{\szer}{16cm}
+\newcommand{\wys}{5.6cm}
+\newcommand{\odstepionowy}{1.2cm}
+
+\definecolor{kolor4}{rgb}{0,0,0.1724}
+\definecolor{kolor5}{rgb}{1.0000,0.1034,0.7241}
+\definecolor{kolor6}{rgb}{1.0000,0.8276,0}
+
+\begin{document}
+	
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/odp_skok_rzecz_ob}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=740,
+	xlabel=$k$,ylabel=$y$,legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {odp_skok_3_obiekt/odpowiedz_40.txt};
+	\addplot[color=kolor5,semithick] file {odp_skok_3_obiekt/odpowiedz_60.txt};
+	\addplot[color=kolor6,semithick] file {odp_skok_3_obiekt/odpowiedz_80.txt};
+	\legend{$y_{\mathrm{40}}$,$y_{\mathrm{60}}$,$y_{\mathrm{80}}$}
+	\nextgroupplot
+	[xmin=0,xmax=740, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot,color=blue,semithick] file {odp_skok_3_obiekt/U_40.txt};
+	\addplot[const plot, color=kolor5,semithick] file {odp_skok_3_obiekt/U_60.txt};
+	\addplot[const plot, color=kolor6,semithick] file {odp_skok_3_obiekt/U_80.txt};
+	\legend{$u_{\mathrm{40}}$,$u_{\mathrm{60}}$,$u_{\mathrm{80}}$}	
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/por_odp_model_rzecz}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=740,
+	xlabel=$k$,ylabel={$y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {odp_skok_80_I_model/lab_odp_model.txt};
+	\addplot[color=red,semithick,densely dashed] file {odp_skok_80_I_model/lab_odp_rzecz.txt};
+	\legend{$y_{\mathrm{model}}$,$y_{\mathrm{rzecz}}$}
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/odp_skok_projekt}%
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=289,
+	xlabel=$k$,ylabel={$y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {projekt/odp_skok_projekt.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/zad_1_pkt_prac}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=151,
+	xlabel=$k$,ylabel=$y$,legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {projekt/od_2.txt};
+	\addplot[const plot,color=kolor5,semithick] file {projekt/od_3.txt};
+	\addplot[const plot,color=kolor6,semithick] file {projekt/od_4.txt};
+	\legend{$y_{\mathrm{2}}$,$y_{\mathrm{3}}$,$y_{\mathrm{4}}$}
+	\nextgroupplot
+	[xmin=0,xmax=151, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=red,semithick] file {projekt/U.txt};	
+	\end{groupplot}
+\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=151,
+	xlabel=$k$,ylabel=$y$,legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {projekt/od_2.txt};
+	\addplot[const plot,color=kolor5,semithick] file {projekt/od_3.txt};
+	\addplot[const plot,color=kolor6,semithick] file {projekt/od_4.txt};
+	\legend{$y_{\mathrm{2}}$,$y_{\mathrm{3}}$,$y_{\mathrm{4}}$}
+	\nextgroupplot
+	[xmin=0,xmax=151, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=red,semithick] file {projekt/U.txt};	
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\end{document}

@@ -1,0 +1,27 @@
+\contentsline {chapter}{\numberline {1\relax .\leavevmode@ifvmode \kern .5em }Wst\k ep}{2}% 
+\contentsline {chapter}{\numberline {2\relax .\leavevmode@ifvmode \kern .5em }Wzory matematyczne}{3}% 
+\contentsline {section}{\numberline {2.1\relax .\leavevmode@ifvmode \kern .5em }Sta\IeC {\l }e i\nobreakspace {}zmienne, indeksowanie}{3}% 
+\contentsline {section}{\numberline {2.2\relax .\leavevmode@ifvmode \kern .5em }Wektory}{3}% 
+\contentsline {section}{\numberline {2.3\relax .\leavevmode@ifvmode \kern .5em }Macierze}{4}% 
+\contentsline {section}{\numberline {2.4\relax .\leavevmode@ifvmode \kern .5em }Wi\k eksze wyra\.zenia matematyczne}{4}% 
+\contentsline {chapter}{\numberline {3\relax .\leavevmode@ifvmode \kern .5em }Tabele}{5}% 
+\contentsline {chapter}{\numberline {4\relax .\leavevmode@ifvmode \kern .5em }Rysunki}{7}% 
+\contentsline {section}{\numberline {4.1\relax .\leavevmode@ifvmode \kern .5em }Schematy blokowe}{7}% 
+\contentsline {section}{\numberline {4.2\relax .\leavevmode@ifvmode \kern .5em }Funkcje statyczne}{8}% 
+\contentsline {section}{\numberline {4.3\relax .\leavevmode@ifvmode \kern .5em }Wyniki symulacji i\nobreakspace {}eksperyment\'ow}{10}% 
+\contentsline {section}{\numberline {4.4\relax .\leavevmode@ifvmode \kern .5em }Kolory}{17}% 
+\contentsline {section}{\numberline {4.5\relax .\leavevmode@ifvmode \kern .5em }Lokalizacja rysunk\'ow (i\nobreakspace {}tabel)}{20}% 
+\contentsline {chapter}{\numberline {5\relax .\leavevmode@ifvmode \kern .5em }Listingi program\'ow}{21}% 
+\contentsline {chapter}{Bibliografia}{22}% 
+\contentsline {chapter}{\numberline {A\relax .\leavevmode@ifvmode \kern .5em }Uwagi do wykonywania sprawozda\'n}{23}% 
+\contentsline {section}{\numberline {A.1\relax .\leavevmode@ifvmode \kern .5em }Kodowanie znak\'ow}{23}% 
+\contentsline {section}{\numberline {A.2\relax .\leavevmode@ifvmode \kern .5em }Nie nale\.zy u\.zywa\'c zwrot\'ow w cudzys\IeC {\l }owiu i narzeka\'n}{23}% 
+\contentsline {section}{\numberline {A.3\relax .\leavevmode@ifvmode \kern .5em }Przecinki zamiast kropek i jednostki}{23}% 
+\contentsline {section}{\numberline {A.4\relax .\leavevmode@ifvmode \kern .5em }Prosty eksport wykres\'ow: \texttt {matlab2tikz}}{24}% 
+\contentsline {section}{\numberline {A.5\relax .\leavevmode@ifvmode \kern .5em }Wstawianie kodu programu i jego zasadno\'s\'c}{25}% 
+\contentsline {section}{\numberline {A.6\relax .\leavevmode@ifvmode \kern .5em }Warunki stosowania \texttt {plot} i \texttt {stairs}}{26}% 
+\contentsline {section}{\numberline {A.7\relax .\leavevmode@ifvmode \kern .5em }Dodatkowe uwagi do wykresach}{26}% 
+\contentsline {section}{\numberline {A.8\relax .\leavevmode@ifvmode \kern .5em }Przeprowadzanie eksperyment\'ow}{27}% 
+\contentsline {section}{\numberline {A.9\relax .\leavevmode@ifvmode \kern .5em }Krytyczne podej\'scie do om\'owienia wynik\'ow}{27}% 
+\contentsline {section}{\numberline {A.10\relax .\leavevmode@ifvmode \kern .5em }Nieustanna archiwizacja i oddelegowana w czasie analizy}{27}% 
+\contentsline {section}{\numberline {A.11\relax .\leavevmode@ifvmode \kern .5em }Om\'owienie wynik\'ow a dobieranie parametr\'ow}{27}% 

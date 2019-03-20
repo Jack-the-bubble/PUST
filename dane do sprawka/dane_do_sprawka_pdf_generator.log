@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  20 MAR 2019 10:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  20 MAR 2019 12:58
 entering extended mode
-**./PID_PDF_GENERATOR.tex
-(PID_PDF_GENERATOR.tex
+**./dane_do_sprawka_pdf_generator.tex
+(dane_do_sprawka_pdf_generator.tex
 LaTeX2e <2018-12-01>
 ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -792,10 +792,11 @@ Package atveryend Info: \enddocument detected (standard20110627).
 )
 ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
 er/tikz/libraries\tikzexternalshared.code.tex")))
-\openout3 = `PID_PDF_GENERATOR.auxlock'.
+\openout3 = `dane_do_sprawka_pdf_generator.auxlock'.
 
- (PID_PDF_GENERATOR.aux)
-\openout1 = `PID_PDF_GENERATOR.aux'.
+
+No file dane_do_sprawka_pdf_generator.aux.
+\openout1 = `dane_do_sprawka_pdf_generator.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
@@ -952,40 +953,83 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 32.
+\openout3 = `pdf/odp_skok_rzecz_ob.md5'.
 
-===== Image 'PID/PID_K=9_Ti=50_Td=0_real' is up-to-date. ======
-===== Image 'PID/PID_K=9_Ti=50_Td=1_real' is up-to-date. ======
-===== Image 'PID/PID_K=10_Ti=60_Td=0_25_real' is up-to-date. ======
-===== Image 'PID/PID_K=9_Ti=50_Td=0_sym' is up-to-date. ======
-===== Image 'PID/PID_K=9_Ti=50_Td=1_sym' is up-to-date. ======
-===== Image 'PID/PID_K=10_Ti=60_Td=0_25_sym' is up-to-date. ======
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
-[1{C:/Users/Michal/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./PID/PI
-D_K=9_Ti=50_Td=0_real.pdf> <./PID/PID_K=9_Ti=50_Td=1_real.pdf>] [2 <./PID/PID_K
-=10_Ti=60_Td=0_25_real.pdf> <./PID/PID_K=9_Ti=50_Td=0_sym.pdf>] [3 <./PID/PID_K
-=9_Ti=50_Td=1_sym.pdf> <./PID/PID_K=10_Ti=60_Td=0_25_sym.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
+\openout3 = `dane_do_sprawka_pdf_generator.auxlock'.
 
-(PID_PDF_GENERATOR.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 160.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
- ) 
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "pdf/odp_skok_rzecz_ob" "\def\tikzexter
+nalrealjob{dane_do_sprawka_pdf_generator}\input{dane_do_sprawka_pdf_generator}"
+' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "pdf/odp_skok_rzecz_ob" "\def\tikzexternalrealjob{dane_do_sprawka_pdf_generato
+r}\input{dane_do_sprawka_pdf_generator}")...executed.
+
+\openout3 = `dane_do_sprawka_pdf_generator.auxlock'.
+
+\openout3 = `pdf/por_odp_model_rzecz.md5'.
+
+\openout3 = `dane_do_sprawka_pdf_generator.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "pdf/por_odp_model_rzecz" "\def\tikzext
+ernalrealjob{dane_do_sprawka_pdf_generator}\input{dane_do_sprawka_pdf_generator
+}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "pdf/por_odp_model_rzecz" "\def\tikzexternalrealjob{dane_do_sprawka_pdf_genera
+tor}\input{dane_do_sprawka_pdf_generator}")...executed.
+
+\openout3 = `dane_do_sprawka_pdf_generator.auxlock'.
+
+\openout3 = `pdf/odp_skok_projekt.md5'.
+
+\openout3 = `dane_do_sprawka_pdf_generator.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "pdf/odp_skok_projekt" "\def\tikzextern
+alrealjob{dane_do_sprawka_pdf_generator}\input{dane_do_sprawka_pdf_generator}"'
+ ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "pdf/odp_skok_projekt" "\def\tikzexternalrealjob{dane_do_sprawka_pdf_generator
+}\input{dane_do_sprawka_pdf_generator}")...executed.
+
+\openout3 = `dane_do_sprawka_pdf_generator.auxlock'.
+
+\openout3 = `pdf/zad_1_pkt_prac.md5'.
+
+\openout3 = `dane_do_sprawka_pdf_generator.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "pdf/zad_1_pkt_prac" "\def\tikzexternal
+realjob{dane_do_sprawka_pdf_generator}\input{dane_do_sprawka_pdf_generator}"' =
+=======
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "pdf/zad_1_pkt_prac" "\def\tikzexternalrealjob{dane_do_sprawka_pdf_generator}\
+input{dane_do_sprawka_pdf_generator}")...executed.
+
+\openout3 = `dane_do_sprawka_pdf_generator.auxlock'.
+
+! I can't write on file `pdf/.md5'.
+<to be read again> 
+                   \relax 
+l.129 	\end{tikzpicture}
+                        
+Please type another output file name: 
+! Emergency stop.
+<to be read again> 
+                   \relax 
+l.129 	\end{tikzpicture}
+                        
+End of file on the terminal!
+
+ 
 Here is how much of TeX's memory you used:
- 33884 strings out of 492946
- 849484 string characters out of 3125823
- 925938 words of memory out of 3000000
+ 33877 strings out of 492946
+ 849269 string characters out of 3125823
+ 925041 words of memory out of 3000000
  37360 multiletter control sequences out of 15000+200000
  536486 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,5n,96p,736b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmmi9.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr6.pfb>
-Output written on PID_PDF_GENERATOR.pdf (3 pages, 176939 bytes).
-PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 62i,3n,96p,748b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

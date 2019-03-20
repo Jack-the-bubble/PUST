@@ -1,0 +1,6 @@
+pdf/odp_skok_rzecz_ob.pdf: odp_skok_3_obiekt/odpowiedz_40.txt
+pdf/odp_skok_rzecz_ob.pdf: odp_skok_3_obiekt/odpowiedz_60.txt
+pdf/odp_skok_rzecz_ob.pdf: odp_skok_3_obiekt/odpowiedz_80.txt
+pdf/odp_skok_rzecz_ob.pdf: odp_skok_3_obiekt/U_40.txt
+pdf/odp_skok_rzecz_ob.pdf: odp_skok_3_obiekt/U_60.txt
+pdf/odp_skok_rzecz_ob.pdf: odp_skok_3_obiekt/U_80.txt

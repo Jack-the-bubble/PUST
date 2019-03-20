@@ -1,0 +1,4 @@
+pdf/zad_1_pkt_prac.pdf: projekt/od_2.txt
+pdf/zad_1_pkt_prac.pdf: projekt/od_3.txt
+pdf/zad_1_pkt_prac.pdf: projekt/od_4.txt
+pdf/zad_1_pkt_prac.pdf: projekt/U.txt
